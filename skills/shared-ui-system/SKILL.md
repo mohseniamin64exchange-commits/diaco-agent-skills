@@ -11,16 +11,17 @@ A new Diaco application should reuse an established visual and interaction langu
 
 ## Before building UI
 
-1. Look for an existing project design system or shared UI repository.
-2. Inspect representative working screens/components.
-3. Identify reusable tokens:
+1. Read the Diaco UI Standard.
+2. Look for an approved project/reference implementation.
+3. Inspect representative working screens/components.
+4. Identify reusable tokens:
    - colors
    - typography
    - spacing
    - radii
    - borders/shadows
    - breakpoints
-4. Identify reusable structures:
+5. Identify reusable structures:
    - app shell
    - sidebar/navigation
    - header
@@ -30,6 +31,19 @@ A new Diaco application should reuse an established visual and interaction langu
    - dialogs
    - notifications
    - empty/error/loading states
+
+## UI Skills reference
+
+`adamtossell/ui-skills` may be consulted for reusable design workflows, reference-capture techniques, prompting patterns, interaction ideas, and frontend practices.
+
+It is **not** the authority for Diaco's visual identity.
+
+Precedence:
+1. approved project-specific UI/reference
+2. ACTIVE Diaco UI rules
+3. UI Skills or other external design references
+
+Do not import an external style as a Diaco-wide standard without explicit approval.
 
 ## Rules
 
@@ -56,4 +70,5 @@ For a new screen, record:
 - [ ] New values/components were introduced only when needed.
 - [ ] Loading/error/empty states are handled.
 - [ ] Responsive and keyboard behavior were checked where applicable.
+- [ ] External UI references did not silently override approved Diaco/project rules.
 - [ ] Intentional deviations are documented.
