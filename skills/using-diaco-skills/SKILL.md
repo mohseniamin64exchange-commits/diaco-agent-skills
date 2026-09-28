@@ -28,53 +28,51 @@ Use the smallest applicable combination of:
 - Security review → `standards/security-review-standard.md`
 - Version/release/rollback → `standards/release-standard.md`
 
-Check `standards/README.md` for each standard's status.
-
-A DRAFT standard is not permission to invent details. Use an approved reference implementation and persist only approved reusable rules.
-
 ## Skill routing
 
 - Continuing work across sessions or Agents → `project-context-handoff`
-- Making GitHub the durable project memory → `github-project-memory`
+- GitHub durable memory → `github-project-memory`
 - Shared UI consistency → `shared-ui-system`
 - UI polish / animation / prototyping / UI review / library choice → `ui-design-engineering`
-- Changing an established/working codebase → `safe-existing-project-change`
-- Working with Supabase web applications → `supabase-webapp-guardrails`
-- Working with Windows desktop applications → `windows-desktop-standard`
-- Reviewing a substantial diff/PR → `pull-request-review`
-- Performing authorized security review → `security-review`
-- Automating Word/documents with R or similar tooling → `document-r-automation`
+- Local business / supplier / lead discovery → `local-business-data`
+- Safe changes in existing codebases → `safe-existing-project-change`
+- Supabase web apps → `supabase-webapp-guardrails`
+- Windows desktop apps → `windows-desktop-standard`
+- PR review → `pull-request-review`
+- Authorized security review → `security-review`
+- Word/document automation → `document-r-automation`
 
 ## Tool/reference routing
 
-- Current external library/API documentation → Context7 when available
-- Web browser automation/verification → Playwright CLI when available
-- Supabase schema/config/project operations → official Supabase MCP when authorized
-- UI design engineering, animation, prototyping and polish → Emil Kowalski Skills as priority specialist reference
+- Current external library/API documentation → Context7
+- Web browser automation/verification → Playwright CLI
+- Supabase schema/config/project operations → official Supabase MCP
+- UI design engineering and motion → Emil Kowalski Skills
 - Additional UI workflow inspiration → UI Skills
-- Authorized application security automation → Strix when appropriate
-
-Multiple standards, skills, and tools may apply.
+- Local business/supplier/lead data → `Mahanaicoach/google-maps-scraper-kit`
+- Authorized application security automation → Strix
 
 ## Shared rules
 
-1. Inspect current repository state before making non-trivial changes.
+1. Inspect current repository state before non-trivial changes.
 2. Identify the project platform.
-3. Load only the relevant standards, skills, and tools.
+3. Load only relevant standards, skills, and tools.
 4. Project-specific rules override generic Diaco defaults when intentionally defined.
-5. Do not invent missing state or missing DRAFT-standard details.
+5. Do not invent missing state or DRAFT-standard details.
 6. Keep changes scoped and reversible.
 7. Verify before declaring completion.
 8. Persist important state for the next session.
+9. For business-data scraping, default to light targeted collection and verify important records.
 
 ## Verification
 
 Before finishing:
-- [ ] Correct standard(s), skill(s), and tools/references were used.
+- [ ] Correct standards/skills/tools were used.
 - [ ] Repository state was inspected.
 - [ ] Correct platform profile was selected.
 - [ ] Relevant verification was performed.
 - [ ] Significant changes received review when appropriate.
 - [ ] DRAFT standards were not silently treated as approved.
 - [ ] External UI guidance did not silently become Diaco identity.
+- [ ] Scraped business data was cleaned/verified as appropriate.
 - [ ] Durable state/handoff was updated when continuation is expected.
