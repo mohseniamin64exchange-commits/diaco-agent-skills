@@ -5,6 +5,17 @@ description: Provides safety rules for Diaco web applications using Supabase. Us
 
 # Supabase Web App Guardrails
 
+## Preferred project access
+
+When the official Supabase MCP is connected and authorized, prefer it for current project/schema/configuration information rather than guessing from old chat context.
+
+Before any write:
+- confirm organization/project/environment,
+- inspect the affected schema/config,
+- understand whether the target is local, staging, or production.
+
+If MCP is unavailable, inspect repository migrations/configuration and official Supabase documentation.
+
 ## Before changing anything
 
 Identify:
@@ -25,6 +36,7 @@ Never guess production identifiers from old chat history when the project can be
 - Review RLS whenever table access changes.
 - Test access for intended roles/users, not just service-role access.
 - Avoid solving authorization problems by disabling RLS.
+- Destructive production changes require explicit scope and a recovery/migration plan.
 
 ## Secrets
 
@@ -33,6 +45,7 @@ Never commit:
 - private API keys
 - database passwords
 - webhook secrets
+- MCP access credentials
 
 Keep placeholders in `.env.example`.
 
