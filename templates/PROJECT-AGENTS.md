@@ -8,10 +8,11 @@ Before substantial work, read in this order:
 
 1. Central coordination rules in `00-AI-HUB/AGENT-START-HERE.md`
 2. Shared Diaco operating rules in `diaco-agent-skills/AGENTS.md`
-3. Any Diaco skill relevant to the current task
-4. This project's own rules and specifications
-5. This project's `HANDOFF.md`
-6. The actual files, tests, configuration, and Git state relevant to the task
+3. Relevant Diaco standard(s) from `diaco-agent-skills/standards/`
+4. Relevant Diaco skill(s), including the correct platform profile
+5. This project's own rules and specifications
+6. This project's `HANDOFF.md`
+7. The actual files, tests, configuration, and Git state relevant to the task
 
 ## Rule precedence
 
@@ -20,11 +21,13 @@ When instructions conflict, use this precedence:
 1. Current project-specific rules and explicit project specifications
 2. Current repository state and verified Git state
 3. Current project handoff
-4. Shared Diaco rules and skills
+4. ACTIVE Diaco standards and relevant Diaco skills
 5. Central hub guidance
 6. Conversation history
 
 Project-specific rules may intentionally override shared Diaco defaults.
+
+A DRAFT Diaco standard must not be treated as an approved visual/behavioral specification. Use an explicitly approved project/reference implementation for missing details.
 
 ## Existing projects
 
