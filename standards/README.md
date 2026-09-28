@@ -32,6 +32,9 @@ If a standard is DRAFT:
 | [User Management Standard](user-management-standard.md) | DRAFT | Reusable users/roles/permissions patterns |
 | [Windows App Standard](windows-app-standard.md) | ACTIVE | Windows desktop platform baseline |
 | [Testing Standard](testing-standard.md) | ACTIVE | Minimum verification discipline |
+| [Engineering Toolchain Standard](engineering-toolchain-standard.md) | ACTIVE | Context7, Playwright CLI, Supabase MCP, UI Skills, Strix and tool-selection policy |
+| [Pull Request Review Standard](pull-request-review-standard.md) | ACTIVE | Diff-based pre-merge quality gate |
+| [Security Review Standard](security-review-standard.md) | ACTIVE | Authorized application-security review |
 | [Release Standard](release-standard.md) | ACTIVE | Versioning, release, rollback and handoff |
 
 ## Promotion rule
