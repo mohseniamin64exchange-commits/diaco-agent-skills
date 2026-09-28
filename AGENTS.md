@@ -29,6 +29,20 @@ Do not assume an old chat accurately reflects the current repository.
 - do not add dependencies without a reason
 - do not commit credentials or secrets
 
+## Platform-aware rules
+
+Diaco has one shared core and separate platform profiles.
+
+Before implementation, identify the actual project platform from the repository. Then apply only the relevant platform-specific skill(s).
+
+Examples:
+- Windows desktop application → `skills/windows-desktop-standard/SKILL.md`
+- Supabase/web application → `skills/supabase-webapp-guardrails/SKILL.md`
+
+Do not automatically apply web/Supabase assumptions to a Windows desktop project, and do not force desktop conventions onto a web project.
+
+Cross-project standards such as project memory, safe change, shared UI, printing, backup/restore, testing, and handoff should remain reusable where applicable. Platform profiles refine those standards rather than replacing the Diaco core.
+
 ## Verification
 
 A task is not complete merely because code was written.
@@ -62,7 +76,6 @@ When adopting third-party work:
 - keep upstream and Diaco-customized versions distinguishable
 - avoid pretending third-party work was authored by Diaco
 
-
 ## Standard project adoption rule
 
 Every Diaco-managed application repository should contain at minimum:
@@ -80,7 +93,7 @@ The standard startup order for an Agent working on a project is:
 
 1. Central hub: `00-AI-HUB/AGENT-START-HERE.md`
 2. Shared Diaco rules: `diaco-agent-skills/AGENTS.md`
-3. Relevant Diaco skill(s)
+3. Relevant Diaco skill(s), including the correct platform profile
 4. Project-specific `AGENTS.md`
 5. Project `HANDOFF.md`
 6. Actual repository files and Git state
