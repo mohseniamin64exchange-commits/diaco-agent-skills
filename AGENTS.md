@@ -33,6 +33,9 @@ Examples:
 - users/roles/permissions → `standards/user-management-standard.md`
 - Windows application behavior → `standards/windows-app-standard.md`
 - testing/verification → `standards/testing-standard.md`
+- engineering tools → `standards/engineering-toolchain-standard.md`
+- pull-request review → `standards/pull-request-review-standard.md`
+- security review → `standards/security-review-standard.md`
 - release/version/rollback → `standards/release-standard.md`
 
 ### Standard status rule
@@ -40,6 +43,19 @@ Examples:
 - **ACTIVE** means use it by default when relevant.
 - **DRAFT** means do not invent missing details. Use an approved real project/reference implementation, then promote only approved reusable rules.
 - Project-specific exceptions belong in the project's own `AGENTS.md`.
+
+## Engineering tool selection
+
+Use specialized tools when they improve the current task; do not install everything everywhere.
+
+- External library/API work → use Context7 when available for current version-specific documentation.
+- Web UI/browser verification → prefer Playwright CLI when available.
+- Supabase project work → prefer the official Supabase MCP when connected and authorized.
+- UI design workflow → UI Skills may be used as a reference; approved Diaco/project UI remains authoritative.
+- Authorized security review → use the Diaco security workflow and Strix when useful.
+- Significant change before merge/release → run the Diaco pull-request review workflow.
+
+If a specialized tool is unavailable, continue using authoritative project state and official vendor documentation rather than guessing.
 
 ## During implementation
 
@@ -74,7 +90,9 @@ Where applicable, verify:
 - linting
 - runtime behavior
 - affected user flow
+- browser flow with Playwright CLI for web changes when useful
 - print/backup/restore behavior if changed
+- security impact for security-sensitive changes
 
 If verification fails, record the failure instead of declaring success.
 
