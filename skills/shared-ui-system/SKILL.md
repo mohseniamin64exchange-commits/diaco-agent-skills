@@ -31,19 +31,45 @@ A new Diaco application should reuse an established visual and interaction langu
    - dialogs
    - notifications
    - empty/error/loading states
+6. If the task involves polish, animation, prototyping, UI-library choice, or mobile-web behavior, load `ui-design-engineering`.
 
-## UI Skills reference
+## Priority Design Engineering reference
 
-`adamtossell/ui-skills` may be consulted for reusable design workflows, reference-capture techniques, prompting patterns, interaction ideas, and frontend practices.
+`emilkowalski/skills` is Diaco's **Priority UI / Design Engineering Reference**.
+
+Use it especially for:
+- UI polish
+- animation decisions and review
+- isolated multi-variant prototyping
+- component/library selection
+- mobile-web interaction details
+- React Native/Expo motion where relevant
+
+See `references/emil-kowalski-skills.md`.
 
 It is **not** the authority for Diaco's visual identity.
 
-Precedence:
+## Additional UI reference
+
+`adamtossell/ui-skills` may also be consulted for reusable design workflows, reference-capture techniques, prompting patterns, interaction ideas, and frontend practices.
+
+## Precedence
+
 1. approved project-specific UI/reference
 2. ACTIVE Diaco UI rules
-3. UI Skills or other external design references
+3. Emil Kowalski Skills
+4. UI Skills and other external design references
 
 Do not import an external style as a Diaco-wide standard without explicit approval.
+
+## Prototype rule
+
+When the visual direction is undecided and alternatives would materially help:
+- explore outside production code,
+- make variants genuinely different,
+- keep existing project tokens/context where appropriate,
+- let the user choose,
+- integrate only the selected direction.
 
 ## Rules
 
@@ -53,6 +79,8 @@ Do not import an external style as a Diaco-wide standard without explicit approv
 - Use semantic design tokens instead of scattered raw values.
 - Accessibility and keyboard behavior are part of component quality.
 - Product-specific branding may override shared defaults intentionally.
+- Motion must serve a purpose and should not slow high-frequency workflows.
+- Inspect existing UI dependencies before introducing another component library.
 
 ## Design contract
 
@@ -71,4 +99,5 @@ For a new screen, record:
 - [ ] Loading/error/empty states are handled.
 - [ ] Responsive and keyboard behavior were checked where applicable.
 - [ ] External UI references did not silently override approved Diaco/project rules.
+- [ ] Prototype exploration remained isolated until user selection.
 - [ ] Intentional deviations are documented.
