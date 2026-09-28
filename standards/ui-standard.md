@@ -1,7 +1,7 @@
 # Diaco UI Standard
 
 **Status:** DRAFT  
-**Version:** 0.1
+**Version:** 0.2
 
 ## Goal
 
@@ -15,6 +15,39 @@ Build a reusable Diaco visual and interaction language so new applications do no
 - Project-specific branding may intentionally override shared defaults.
 - Accessibility, keyboard behavior, focus, loading, empty, validation, and error states are part of UI quality.
 - Do not infer colors, dimensions, typography, or layout details that have not yet been approved.
+- When visual direction is genuinely undecided, exploration should happen in an isolated prototype rather than by repeatedly rewriting production UI.
+- Meaningful alternatives should differ in layout, density, interaction model, hierarchy, or motion—not merely color.
+- The user selects the visual direction. The Agent may explain tradeoffs but should not silently choose a universal Diaco style.
+- Motion should have a functional purpose and must not make frequent workflows feel slower.
+- Before adding a new UI library, inspect what the project already uses and avoid unnecessary dependency churn.
+
+## External reference hierarchy
+
+For UI/design work use this order:
+
+1. approved project-specific UI/reference
+2. ACTIVE Diaco UI rules
+3. `emilkowalski/skills` — **Priority UI / Design Engineering Reference**
+4. `adamtossell/ui-skills` — additional UI workflow reference
+5. other external design references
+
+External repositories provide specialist guidance; they do not define Diaco's visual identity.
+
+See:
+- `references/emil-kowalski-skills.md`
+- `skills/ui-design-engineering/SKILL.md`
+
+## Where Emil Kowalski Skills is especially useful
+
+- UI polish and interaction details
+- animation decision-making and implementation
+- reviewing existing animations
+- isolated multi-variant UI prototyping
+- choosing UI/component libraries
+- mobile-web interaction polish
+- React Native/Expo motion when relevant
+
+Exact animation constants, colors, typography, layout values, or library choices do **not** automatically become Diaco-wide defaults.
 
 ## To be defined from real reference implementations
 
@@ -31,6 +64,7 @@ The following are intentionally not yet fixed:
 - toast/notification appearance
 - RTL/LTR behavior details
 - Windows-specific controls and high-DPI rules
+- approved Diaco motion tokens/durations/easing values
 
 ## Reference extraction workflow
 
@@ -39,7 +73,8 @@ When the user identifies a screen or project section as the desired reference:
 1. inspect the actual implementation/screens,
 2. record exact reusable choices,
 3. separate product-specific content from reusable design rules,
-4. add the reusable rules here,
-5. only mark them ACTIVE after approval.
+4. use specialist references to improve craft without changing approved identity,
+5. add only approved reusable rules here,
+6. mark visual rules ACTIVE only after approval.
 
 Until then, do not claim a specific visual style is the Diaco standard.
