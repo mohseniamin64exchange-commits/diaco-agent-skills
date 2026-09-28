@@ -1,6 +1,6 @@
 # Diaco Agent Skills
 
-Reusable workflows and operating rules for AI-assisted projects.
+Reusable workflows, shared standards, and platform profiles for AI-assisted projects.
 
 This repository is the **custom skill layer** used across Diaco projects. It is intentionally separate from application repositories and from third-party upstream repositories.
 
@@ -12,8 +12,20 @@ Diaco Agent Skills exists to make project work portable across:
 - Codex and other coding agents
 - new chat sessions
 - different machines
+- different application platforms
 
 The repository stores **how we work**, not the full source code of every product.
+
+## Architecture
+
+Diaco is organized in layers:
+
+1. **Core operating rules** — source of truth, safe changes, verification, handoff, Git discipline.
+2. **Shared standards** — reusable conventions such as UI, printing, backup/restore, project memory, and testing.
+3. **Platform profiles** — rules that apply only to the actual technology/platform, such as Windows Desktop or Supabase/Web.
+4. **Project-specific rules** — intentional constraints and exceptions stored in each application's own `AGENTS.md`.
+
+The core stays stable. Platform-specific rules are applied only when relevant.
 
 ## Core principles
 
@@ -26,6 +38,7 @@ The repository stores **how we work**, not the full source code of every product
 7. Keep secrets out of Git.
 8. Distinguish third-party upstream projects from Diaco-customized versions.
 9. Leave a usable handoff for the next Agent.
+10. Detect the project platform before applying platform-specific rules.
 
 ## Start here
 
@@ -33,17 +46,23 @@ Agents should begin with:
 
 1. `AGENTS.md`
 2. `skills/using-diaco-skills/SKILL.md`
-3. the specific skill relevant to the task
+3. the specific shared skill(s) relevant to the task
+4. the platform profile relevant to the project
+5. project-specific rules and handoff
 
 ## Initial skills
 
+### Core/shared
 - `using-diaco-skills`
 - `project-context-handoff`
 - `github-project-memory`
 - `shared-ui-system`
 - `safe-existing-project-change`
-- `supabase-webapp-guardrails`
 - `document-r-automation`
+
+### Platform profiles
+- `supabase-webapp-guardrails`
+- `windows-desktop-standard`
 
 ## Relationship to upstream Agent Skills
 
