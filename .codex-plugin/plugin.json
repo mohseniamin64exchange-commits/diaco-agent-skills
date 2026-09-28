@@ -1,0 +1,26 @@
+{
+  "name": "diaco-agent-skills",
+  "version": "0.1.0",
+  "description": "Reusable Diaco workflows for persistent project context, safe implementation, UI consistency, Supabase web apps, GitHub memory, and document automation.",
+  "author": {
+    "name": "Diaco"
+  },
+  "repository": "https://github.com/mohseniamin64exchange-commits/diaco-agent-skills",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Diaco Agent Skills",
+    "shortDescription": "Reusable project workflows and cross-session operating rules.",
+    "longDescription": "Diaco Agent Skills provides reusable workflows for project continuity, safe code changes, shared UI systems, GitHub-backed memory, Supabase applications, and document automation.",
+    "developerName": "Diaco",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use the appropriate Diaco workflow for this project task",
+      "Read the project context and continue safely from the current repository state"
+    ]
+  }
+}
