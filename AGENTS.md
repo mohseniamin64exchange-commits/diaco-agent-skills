@@ -4,11 +4,12 @@
 
 For project work, prefer this order when information conflicts:
 
-1. Current repository files and Git state
+1. Current repository files and verified Git state
 2. Project-specific rules/specifications
 3. Latest project handoff
-4. Diaco shared skills and references
-5. Conversation history
+4. Approved Diaco standards and relevant skills
+5. Central hub guidance
+6. Conversation history
 
 Do not assume an old chat accurately reflects the current repository.
 
@@ -20,6 +21,26 @@ Do not assume an old chat accurately reflects the current repository.
 - identify existing patterns before creating new ones
 - preserve unrelated working behavior
 
+## Standards layer
+
+Before implementing a reusable feature, inspect `standards/README.md` and load the relevant standard.
+
+Examples:
+- project structure / onboarding → `standards/project-standard.md`
+- UI/layout/components → `standards/ui-standard.md`
+- printing → `standards/print-standard.md`
+- backup/restore → `standards/backup-restore-standard.md`
+- users/roles/permissions → `standards/user-management-standard.md`
+- Windows application behavior → `standards/windows-app-standard.md`
+- testing/verification → `standards/testing-standard.md`
+- release/version/rollback → `standards/release-standard.md`
+
+### Standard status rule
+
+- **ACTIVE** means use it by default when relevant.
+- **DRAFT** means do not invent missing details. Use an approved real project/reference implementation, then promote only approved reusable rules.
+- Project-specific exceptions belong in the project's own `AGENTS.md`.
+
 ## During implementation
 
 - keep changes scoped
@@ -28,6 +49,7 @@ Do not assume an old chat accurately reflects the current repository.
 - do not delete code merely because it appears unused
 - do not add dependencies without a reason
 - do not commit credentials or secrets
+- do not turn a DRAFT standard into a universal rule without evidence/approval
 
 ## Platform-aware rules
 
@@ -41,8 +63,6 @@ Examples:
 
 Do not automatically apply web/Supabase assumptions to a Windows desktop project, and do not force desktop conventions onto a web project.
 
-Cross-project standards such as project memory, safe change, shared UI, printing, backup/restore, testing, and handoff should remain reusable where applicable. Platform profiles refine those standards rather than replacing the Diaco core.
-
 ## Verification
 
 A task is not complete merely because code was written.
@@ -54,6 +74,7 @@ Where applicable, verify:
 - linting
 - runtime behavior
 - affected user flow
+- print/backup/restore behavior if changed
 
 If verification fails, record the failure instead of declaring success.
 
@@ -87,15 +108,16 @@ New projects should start from:
 - `templates/PROJECT-AGENTS.md`
 - `templates/PROJECT-HANDOFF.md`
 
-Existing projects can adopt this standard without restructuring the application: add these two files first, then preserve the existing architecture unless the task explicitly requires changes.
+Existing projects can adopt this standard without restructuring the application.
 
 The standard startup order for an Agent working on a project is:
 
 1. Central hub: `00-AI-HUB/AGENT-START-HERE.md`
 2. Shared Diaco rules: `diaco-agent-skills/AGENTS.md`
-3. Relevant Diaco skill(s), including the correct platform profile
-4. Project-specific `AGENTS.md`
-5. Project `HANDOFF.md`
-6. Actual repository files and Git state
+3. Relevant Diaco standard(s)
+4. Relevant Diaco skill(s), including the correct platform profile
+5. Project-specific `AGENTS.md`
+6. Project `HANDOFF.md`
+7. Actual repository files, tests, configuration, and Git state
 
 Project-specific rules take precedence over generic Diaco defaults when intentionally defined.
