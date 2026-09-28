@@ -1,11 +1,11 @@
 # Diaco Engineering Toolchain Standard
 
 **Status:** ACTIVE  
-**Version:** 0.1
+**Version:** 0.2
 
 ## Goal
 
-Use specialized engineering tools only when they improve correctness, context quality, verification, or security. Do not install every tool into every project.
+Use specialized engineering tools only when they improve correctness, context quality, verification, design quality, or security. Do not install every tool into every project.
 
 ## Tool selection
 
@@ -49,16 +49,38 @@ Use specialized engineering tools only when they improve correctness, context qu
 - Never place service-role keys, access tokens, or database passwords in Git.
 - Destructive production changes require explicit scope and a recovery/migration plan.
 
-### UI Skills — design workflow reference
+### Emil Kowalski Skills — priority Design Engineering reference
 
 **Use when:**
-- designing or improving UI,
-- a reusable design workflow, capture method, or interaction pattern helps.
+- creating or polishing UI,
+- deciding whether and how to animate,
+- reviewing interaction quality,
+- comparing multiple UI directions,
+- choosing a UI/component library,
+- improving mobile-web behavior,
+- working with React Native/Expo motion where relevant.
 
 **Diaco rule:**
-- Treat UI Skills as a reference library, not the source of truth for Diaco visual identity.
-- Diaco's approved UI Standard and the project's approved reference implementation take precedence.
-- Extract useful workflow ideas without importing arbitrary styling as a universal standard.
+- Treat `emilkowalski/skills` as the priority specialist reference for UI craft and motion.
+- Project-specific approved UI and the Diaco UI Standard remain authoritative.
+- Use isolated prototyping when the visual direction is undecided and comparison would help.
+- Do not import external colors, typography, layout, animation constants, or dependencies as Diaco-wide defaults without approval.
+- For native Windows projects, adapt principles rather than blindly applying web/CSS implementation details.
+
+See:
+- `references/emil-kowalski-skills.md`
+- `skills/ui-design-engineering/SKILL.md`
+
+### UI Skills — additional design workflow reference
+
+**Use when:**
+- a reusable design workflow, capture method, or interaction pattern helps,
+- additional frontend/UI reference material is useful.
+
+**Diaco rule:**
+- Treat UI Skills as an additional reference library.
+- Emil Kowalski Skills is the priority specialist reference for design engineering/motion.
+- Diaco's approved UI Standard and the project's approved reference implementation take precedence over both.
 
 ### Strix — application security testing
 
@@ -98,15 +120,16 @@ Use available GitHub/Agent review tooling, but keep the review criteria owned by
 
 ## Installation policy
 
-- Do not globally add dependencies to application repositories just because a tool is approved here.
+- Do not globally add dependencies to application repositories just because a tool/reference is approved here.
 - Install or connect a tool when the current project/task needs it.
 - Prefer official packages/repositories and current vendor documentation.
+- External skill repositories may be consulted without becoming project dependencies.
 - Record project-local setup only when another Agent needs it to reproduce the workflow.
 
 ## Precedence
 
-1. Project-specific rules
+1. Project-specific rules and approved project references
 2. Current repository state
 3. Diaco ACTIVE standards
-4. Tool-specific recommendations
+4. Specialist external references/tools
 5. Generic Agent assumptions
