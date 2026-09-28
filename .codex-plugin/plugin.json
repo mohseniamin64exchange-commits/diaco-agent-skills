@@ -1,7 +1,7 @@
 {
   "name": "diaco-agent-skills",
-  "version": "0.3.0",
-  "description": "Reusable Diaco standards and workflows for project continuity, safe implementation, engineering tool selection, UI consistency, testing, security review, Windows desktop apps, Supabase web apps, GitHub memory, and document automation.",
+  "version": "0.4.0",
+  "description": "Reusable Diaco standards and workflows for project continuity, safe implementation, engineering tool selection, UI design engineering, testing, security review, Windows desktop apps, Supabase web apps, GitHub memory, and document automation.",
   "author": {
     "name": "Diaco"
   },
@@ -9,8 +9,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Diaco Agent Skills",
-    "shortDescription": "Reusable standards, workflows, reviews, and platform profiles.",
-    "longDescription": "Diaco Agent Skills provides reusable standards and workflows for project continuity, safe code changes, engineering tool selection, shared UI systems, browser verification, security review, pull-request review, Windows desktop applications, Supabase web apps, GitHub-backed memory, and document automation.",
+    "shortDescription": "Reusable standards, design engineering workflows, reviews, and platform profiles.",
+    "longDescription": "Diaco Agent Skills provides reusable standards and workflows for project continuity, safe code changes, engineering tool selection, UI design engineering and prototyping, browser verification, security review, pull-request review, Windows desktop applications, Supabase web apps, GitHub-backed memory, and document automation.",
     "developerName": "Diaco",
     "category": "Productivity",
     "capabilities": [
@@ -19,8 +19,8 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use the appropriate Diaco standards, workflows, and engineering tools for this project task",
-      "Read the project context, select the correct platform profile, verify with the appropriate tools, and continue safely from the current repository state"
+      "Use the appropriate Diaco standards, workflows, specialist references, and engineering tools for this project task",
+      "Read the project context, select the correct platform profile, use approved UI/design references when relevant, verify with the appropriate tools, and continue safely from the current repository state"
     ]
   }
 }
