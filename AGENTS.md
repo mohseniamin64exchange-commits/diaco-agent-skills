@@ -61,3 +61,28 @@ When adopting third-party work:
 - record the original upstream
 - keep upstream and Diaco-customized versions distinguishable
 - avoid pretending third-party work was authored by Diaco
+
+
+## Standard project adoption rule
+
+Every Diaco-managed application repository should contain at minimum:
+
+- `AGENTS.md` — project-specific operating rules and rule precedence
+- `HANDOFF.md` — current cross-session project state
+
+New projects should start from:
+- `templates/PROJECT-AGENTS.md`
+- `templates/PROJECT-HANDOFF.md`
+
+Existing projects can adopt this standard without restructuring the application: add these two files first, then preserve the existing architecture unless the task explicitly requires changes.
+
+The standard startup order for an Agent working on a project is:
+
+1. Central hub: `00-AI-HUB/AGENT-START-HERE.md`
+2. Shared Diaco rules: `diaco-agent-skills/AGENTS.md`
+3. Relevant Diaco skill(s)
+4. Project-specific `AGENTS.md`
+5. Project `HANDOFF.md`
+6. Actual repository files and Git state
+
+Project-specific rules take precedence over generic Diaco defaults when intentionally defined.
