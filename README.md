@@ -1,66 +1,69 @@
 # Diaco Agent Skills
 
-Reusable workflows, shared standards, engineering tool selection, design-engineering references, and platform profiles for AI-assisted projects.
+Reusable workflows, shared standards, engineering tool selection, design-engineering references, business-data tooling, and platform profiles for AI-assisted projects.
 
-**Current version:** 0.4.0
+**Current version:** 0.5.0
 
-This repository is the **custom skill and standards layer** used across Diaco projects. It is intentionally separate from application repositories and third-party upstream repositories.
+This repository is the custom skill and standards layer used across Diaco projects. It is intentionally separate from application repositories and third-party upstream repositories.
 
 ## Architecture
 
 Diaco is organized in layers:
 
-1. **Core operating rules** — source of truth, safe changes, verification, handoff, Git discipline.
-2. **Shared standards** — project structure, UI, printing, backup/restore, users, testing, security, PR review, releases, and engineering tool selection.
-3. **Skills** — operational workflows for recurring tasks.
-4. **Platform profiles** — rules for the actual technology/platform, such as Windows Desktop or Supabase/Web.
-5. **Specialized tools/references** — used only when they improve the current task.
-6. **Project-specific rules** — constraints and exceptions stored in each application's own `AGENTS.md`.
+1. Core operating rules
+2. Shared standards
+3. Skills
+4. Platform profiles
+5. Specialized tools/references
+6. Project-specific rules
 
 ## Start here
 
 Agents should begin with:
-
 1. `AGENTS.md`
 2. `skills/using-diaco-skills/SKILL.md`
-3. relevant standards from `standards/`
+3. relevant standards
 4. relevant operational skills
 5. relevant specialized tools/references
-6. the correct platform profile
+6. correct platform profile
 7. project-specific `AGENTS.md` and `HANDOFF.md`
-8. actual project files and Git state
+8. actual repository files and Git state
 
 ## Approved engineering tools and references
 
 Use only when relevant:
 
 - **Context7** — current version-specific library/API documentation
-- **Playwright CLI** — preferred agent-driven browser automation for web projects
-- **Supabase MCP** — preferred direct Supabase project access when connected and authorized
-- **Emil Kowalski Skills** — **Priority UI / Design Engineering Reference** for UI polish, animation, prototyping, UI review, UI-library choice, and mobile-web craft
+- **Playwright CLI** — agent-driven browser automation for web projects
+- **Supabase MCP** — direct Supabase project access when connected and authorized
+- **Emil Kowalski Skills** — Priority UI / Design Engineering Reference
 - **UI Skills** — additional external design/workflow reference
-- **Strix** — authorized application-security testing when appropriate
-- **Pull Request Review** — Diaco-owned quality gate independent of any single plugin
+- **Google Maps Scraper Kit** — **Priority Local Business Data / Lead Generation Tool**
+- **Strix** — authorized application-security testing
+- **Pull Request Review** — Diaco-owned quality gate
+
+### Google Maps business-data source
+
+Official Diaco-selected repository:
+
+`Mahanaicoach/google-maps-scraper-kit`
+
+Use it for supplier discovery, local business research, prospect/lead lists, CRM enrichment, and related Jarvis workflows. Default to light, targeted use.
 
 See:
-- `standards/engineering-toolchain-standard.md`
-- `references/emil-kowalski-skills.md`
-- `skills/ui-design-engineering/SKILL.md`
+- `references/google-maps-scraper-kit.md`
+- `skills/local-business-data/SKILL.md`
 
 ## UI reference precedence
-
-For interface work:
 
 1. approved project-specific UI/reference
 2. ACTIVE Diaco UI rules
 3. Emil Kowalski Skills
 4. UI Skills and other external references
 
-External references improve craft; they do not define Diaco's visual identity.
-
 ## Standards
 
-See `standards/README.md` for the authoritative registry.
+See `standards/README.md`.
 
 ### ACTIVE
 - Project Standard
@@ -77,8 +80,6 @@ See `standards/README.md` for the authoritative registry.
 - Backup & Restore Standard
 - User Management Standard
 
-DRAFT standards must not be filled with invented visual or behavioral details.
-
 ## Skills
 
 ### Core/shared
@@ -87,6 +88,7 @@ DRAFT standards must not be filled with invented visual or behavioral details.
 - `github-project-memory`
 - `shared-ui-system`
 - `ui-design-engineering`
+- `local-business-data`
 - `safe-existing-project-change`
 - `pull-request-review`
 - `security-review`
@@ -108,10 +110,7 @@ DRAFT standards must not be filled with invented visual or behavioral details.
 8. Keep secrets out of Git.
 9. Distinguish third-party upstream projects from Diaco-customized versions.
 10. Leave a usable handoff for the next Agent.
-11. Detect the project platform before applying platform-specific rules.
-12. Do not invent details for a DRAFT standard.
-13. External UI expertise may improve implementation quality but may not silently become Diaco-wide visual identity.
-
-## Upstream references
-
-Important third-party tools and references are registered in `00-AI-HUB`. Diaco keeps external ownership/licensing separate from our own standards and workflows.
+11. Detect the platform before applying platform-specific rules.
+12. Do not invent details for DRAFT standards.
+13. External UI expertise may improve implementation quality but may not silently become Diaco visual identity.
+14. Business-data collection should be targeted, cleaned, and verified before important downstream use.
