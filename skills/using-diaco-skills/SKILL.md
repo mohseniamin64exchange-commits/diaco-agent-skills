@@ -11,7 +11,7 @@ Use the smallest applicable combination of:
 1. shared standard,
 2. operational skill,
 3. platform profile,
-4. specialized engineering tool,
+4. specialized engineering tool/reference,
 5. project-specific rule.
 
 ## Standards routing
@@ -36,7 +36,8 @@ A DRAFT standard is not permission to invent details. Use an approved reference 
 
 - Continuing work across sessions or Agents → `project-context-handoff`
 - Making GitHub the durable project memory → `github-project-memory`
-- Building or reusing consistent application UI → `shared-ui-system`
+- Shared UI consistency → `shared-ui-system`
+- UI polish / animation / prototyping / UI review / library choice → `ui-design-engineering`
 - Changing an established/working codebase → `safe-existing-project-change`
 - Working with Supabase web applications → `supabase-webapp-guardrails`
 - Working with Windows desktop applications → `windows-desktop-standard`
@@ -44,12 +45,13 @@ A DRAFT standard is not permission to invent details. Use an approved reference 
 - Performing authorized security review → `security-review`
 - Automating Word/documents with R or similar tooling → `document-r-automation`
 
-## Tool routing
+## Tool/reference routing
 
 - Current external library/API documentation → Context7 when available
 - Web browser automation/verification → Playwright CLI when available
 - Supabase schema/config/project operations → official Supabase MCP when authorized
-- UI workflow inspiration → UI Skills as a non-authoritative reference
+- UI design engineering, animation, prototyping and polish → Emil Kowalski Skills as priority specialist reference
+- Additional UI workflow inspiration → UI Skills
 - Authorized application security automation → Strix when appropriate
 
 Multiple standards, skills, and tools may apply.
@@ -68,10 +70,11 @@ Multiple standards, skills, and tools may apply.
 ## Verification
 
 Before finishing:
-- [ ] Correct standard(s), skill(s), and tools were used.
+- [ ] Correct standard(s), skill(s), and tools/references were used.
 - [ ] Repository state was inspected.
 - [ ] Correct platform profile was selected.
 - [ ] Relevant verification was performed.
 - [ ] Significant changes received review when appropriate.
 - [ ] DRAFT standards were not silently treated as approved.
+- [ ] External UI guidance did not silently become Diaco identity.
 - [ ] Durable state/handoff was updated when continuation is expected.
