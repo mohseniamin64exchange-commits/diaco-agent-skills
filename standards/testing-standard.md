@@ -1,7 +1,7 @@
 # Diaco Testing & Verification Standard
 
 **Status:** ACTIVE  
-**Version:** 0.1
+**Version:** 0.2
 
 ## Principle
 
@@ -17,6 +17,26 @@ Use the checks that actually exist for the project:
 - runtime/manual user flow
 - data migration verification
 - print/backup/restore verification when affected
+
+## Web applications
+
+When browser behavior changed and Playwright CLI is available, use it for agent-driven verification such as:
+- critical user flows
+- screenshots
+- traces
+- selector/interaction checks
+- reproduction of browser-specific failures
+
+One-off browser verification does not replace the project's durable automated tests.
+
+If a meaningful bug is found, add a regression test when practical.
+
+## Security-sensitive changes
+
+For auth, permissions, public APIs, RLS, secrets, file handling, payment, or exposed admin functionality:
+- apply `security-review-standard.md`,
+- use Strix when authorized and useful,
+- validate automated findings before treating them as confirmed.
 
 ## Existing projects
 
