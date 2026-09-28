@@ -5,7 +5,7 @@
 For project work, prefer this order when information conflicts:
 
 1. Current repository files and verified Git state
-2. Project-specific rules/specifications
+2. Project-specific rules/specifications and approved project references
 3. Latest project handoff
 4. Approved Diaco standards and relevant skills
 5. Central hub guidance
@@ -44,16 +44,19 @@ Examples:
 - **DRAFT** means do not invent missing details. Use an approved real project/reference implementation, then promote only approved reusable rules.
 - Project-specific exceptions belong in the project's own `AGENTS.md`.
 
-## Engineering tool selection
+## Engineering tool and reference selection
 
-Use specialized tools when they improve the current task; do not install everything everywhere.
+Use specialized tools/references when they improve the current task; do not install everything everywhere.
 
-- External library/API work → use Context7 when available for current version-specific documentation.
-- Web UI/browser verification → prefer Playwright CLI when available.
-- Supabase project work → prefer the official Supabase MCP when connected and authorized.
-- UI design workflow → UI Skills may be used as a reference; approved Diaco/project UI remains authoritative.
-- Authorized security review → use the Diaco security workflow and Strix when useful.
-- Significant change before merge/release → run the Diaco pull-request review workflow.
+- External library/API work → Context7 when available.
+- Web UI/browser verification → Playwright CLI when available.
+- Supabase project work → official Supabase MCP when connected and authorized.
+- UI polish, animation, prototyping, UI review, mobile-web craft, or UI-library choice → load `ui-design-engineering` and use `emilkowalski/skills` as the priority specialist reference.
+- Additional UI workflow ideas → UI Skills.
+- Authorized security review → Diaco security workflow and Strix when useful.
+- Significant change before merge/release → Diaco pull-request review workflow.
+
+Approved project UI and the Diaco UI Standard always take precedence over external UI references.
 
 If a specialized tool is unavailable, continue using authoritative project state and official vendor documentation rather than guessing.
 
@@ -66,6 +69,7 @@ If a specialized tool is unavailable, continue using authoritative project state
 - do not add dependencies without a reason
 - do not commit credentials or secrets
 - do not turn a DRAFT standard into a universal rule without evidence/approval
+- do not convert external UI taste into a Diaco-wide visual rule without approval
 
 ## Platform-aware rules
 
@@ -91,6 +95,7 @@ Where applicable, verify:
 - runtime behavior
 - affected user flow
 - browser flow with Playwright CLI for web changes when useful
+- UI interaction/polish on the actual target platform
 - print/backup/restore behavior if changed
 - security impact for security-sensitive changes
 
