@@ -1,60 +1,35 @@
 # Diaco Engineering Toolchain Standard
 
 **Status:** ACTIVE  
-**Version:** 0.3
+**Version:** 0.4
 
 ## Goal
 
-Use specialized engineering tools only when they improve correctness, context quality, verification, design quality, business-data gathering, or security. Do not install every tool into every project.
+Use specialized engineering and business tools only when they improve correctness, context quality, verification, design quality, business-data gathering, marketing execution, or security. Do not install every tool into every project.
 
 ## Tool selection
 
-### Context7 — current library/API documentation
-
+### Context7
 Use for version-sensitive external libraries/frameworks/APIs.
 
-**Diaco rule:**
-- Prefer Context7 for current, version-specific documentation when available.
-- If unavailable or incomplete, use official vendor documentation.
-- Project source and lockfiles determine the actual installed version.
+### Playwright CLI
+Use for web UI/browser flow verification.
 
-### Playwright CLI — browser automation for coding Agents
+### Supabase MCP
+Use for authorized Supabase project/schema/config access.
 
-Use for web UI/browser flow verification, screenshots, traces, selectors, and interaction checks.
+### Emil Kowalski Skills
+Use for UI polish, motion, prototyping, and design-engineering review.
 
-**Diaco rule:**
-- Prefer Playwright CLI for agent-driven browser interaction when available.
-- Existing project tests remain authoritative.
-- Do not apply it to native Windows desktop UI.
-
-### Supabase MCP — direct Supabase project access
-
-Use when a project actually uses Supabase and authorized access exists.
-
-**Diaco rule:**
-- Prefer the official Supabase MCP over guessing schema/configuration.
-- Confirm organization/project/environment before writes.
-- Keep credentials and secrets out of Git.
-- Destructive production changes require explicit scope and recovery/migration planning.
-
-### Emil Kowalski Skills — priority Design Engineering reference
-
-Use for UI polish, motion, animation review, prototyping, component/library selection, and mobile-web craft.
-
-**Diaco rule:**
-- Project-approved UI and the Diaco UI Standard remain authoritative.
-- Use external guidance to improve craft, not to silently define Diaco visual identity.
-
-### UI Skills — additional design workflow reference
-
-Use as an additional frontend/UI reference when helpful.
+### UI Skills
+Use as an additional UI/frontend reference.
 
 ### Google Maps Scraper Kit — priority Local Business Data tool
 
-Primary registered source:
+Primary source:
 `Mahanaicoach/google-maps-scraper-kit`
 
-Use when the task needs:
+Use for:
 - local business discovery
 - supplier/vendor discovery
 - lead/prospect lists
@@ -62,46 +37,76 @@ Use when the task needs:
 - competitor discovery
 - business contact enrichment
 
-**Diaco rule:**
-- Default to light, targeted use.
-- Prefer small validation runs and one job at a time.
-- Keep depth conservative unless the user explicitly needs more.
-- Clean and deduplicate results before downstream use.
-- Verify important business records before relying on them operationally.
-- Do not treat scraping results as permission for automated bulk outreach.
-- Prefer one reusable local/server deployment rather than installing a scraper into every application.
-- Do not silently substitute a different fork for the user-selected repository.
+Rules:
+- light targeted use by default
+- small validation runs first
+- clean/deduplicate before downstream use
+- verify important business records
+- do not treat scraped data as outreach consent
 
 See:
 - `references/google-maps-scraper-kit.md`
 - `skills/local-business-data/SKILL.md`
 
-### Strix — application security testing
+### Marketing Skills — priority Marketing & Growth reference
 
-Use for authorized security reviews of systems we own or are explicitly allowed to test.
+Primary source:
+`coreyhaines31/marketingskills`
 
-**Diaco rule:**
-- Prefer local/staging/test environments.
-- Use non-destructive testing by default.
-- Validate automated findings before treating them as confirmed.
+Use for:
+- product marketing
+- prospecting
+- customer research
+- competitor analysis
+- content/copy
+- SEO/AI SEO
+- CRO
+- ads
+- email/cold email
+- pricing
+- launch
+- analytics/attribution
+- revops
+- marketing loops
 
-### Pull Request Review — quality gate
+Rule:
+- build product-marketing context first when downstream work depends on product/audience/positioning.
+- real business/product/customer data remains authoritative.
+- do not treat generated output as successful until measurable validation exists.
 
-This is a Diaco capability rather than a dependency on one particular plugin.
+See:
+- `references/marketing-skills.md`
+- `skills/automated-marketing-growth/SKILL.md`
 
-Use available GitHub/Agent review tooling while keeping the review criteria owned by Diaco.
+### Automated Marketing Pipeline
+
+Preferred combined workflow:
+1. product context
+2. business discovery
+3. clean/deduplicate
+4. qualify/segment
+5. generate appropriate marketing output
+6. human checkpoint before real outbound action
+7. measure results
+8. automate only after a successful pilot
+
+### Strix
+Use for authorized security reviews.
+
+### Pull Request Review
+Use as a Diaco-owned quality gate.
 
 ## Installation policy
 
 - Do not globally add dependencies just because a tool/reference is approved.
 - Install/connect a tool when the current task needs it.
-- Prefer shared services for reusable capabilities where practical.
+- Prefer shared services for reusable capabilities.
 - Preserve source attribution/licensing.
-- Record project-local setup only when another Agent needs it to reproduce the workflow.
+- Record project-local setup only when another Agent needs it.
 
 ## Precedence
 
-1. Project-specific rules and approved project references
+1. Project-specific rules and real business/project data
 2. Current repository state
 3. Diaco ACTIVE standards
 4. Specialist external references/tools
