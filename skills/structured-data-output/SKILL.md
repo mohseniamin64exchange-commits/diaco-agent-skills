@@ -1,75 +1,75 @@
 ---
 name: structured-data-output
-description: Creates consistent Persian RTL structured outputs such as Excel lead lists, business directories, data tables, and report tables using the user's approved information structure while allowing project-specific colors and icons.
+description: خروجی‌های ساختاریافته فارسی و RTL مانند Excel Lead List، Business Directory، Data Table و Report Table را با Structure تأییدشده کاربر می‌سازد، در حالی که رنگ و آیکون می‌توانند بر اساس پروژه تغییر کنند.
 ---
 
 # Structured Data Output
 
-## Use when
+## چه زمانی استفاده شود
 
-- creating Persian Excel workbooks
-- exporting lead/business lists
-- creating directory tables
-- designing data-heavy admin tables
-- converting scraper/API results into polished user-facing data
-- the user asks for "خروجی استاندارد من" or equivalent
+- ساخت Workbook فارسی در Excel
+- خروجی گرفتن Lead / Business List
+- ساخت Directory Table
+- طراحی Admin Table داده‌محور
+- تبدیل خروجی Scraper / API به Data قابل‌ارائه به کاربر
+- وقتی کاربر می‌گوید «خروجی استاندارد من» یا عبارت مشابه
 
-## Required standard
+## Standard اجباری
 
-Read:
+بخوان:
 
 `standards/structured-data-presentation-standard.md`
 
-For Excel/business-list tasks also read:
+برای Taskهای Excel / Business List همچنین بخوان:
 
 `references/babol-mechanics-excel-golden-template.md`
 
 ## Workflow
 
-1. Identify the actual data source and fields.
-2. Remove irrelevant raw fields unless the user needs them.
-3. Deduplicate when applicable.
-4. Create useful human-facing categories separately from source categories when useful.
-5. Apply the approved Persian information order.
-6. Number rows continuously from 1.
-7. Apply RTL direction.
-8. Center structured tabular data by default.
-9. Add filter/freeze behavior for long tables when the output format supports it.
-10. Apply the current project theme without changing the approved structure.
-11. Verify that missing values were not invented.
+1. Data Source واقعی و Fieldها را مشخص کن.
+2. Raw Fieldهای نامرتبط را حذف کن مگر اینکه کاربر به آن‌ها نیاز داشته باشد.
+3. در صورت نیاز Deduplicate کن.
+4. در صورت مفید بودن، Human-friendly Category را جدا از Source Category بساز.
+5. ترتیب اطلاعات فارسی تأییدشده را اعمال کن.
+6. شماره ردیف را از 1 به‌صورت پیوسته بساز.
+7. Direction را RTL کن.
+8. Structured Table Data را به‌صورت پیش‌فرض Center کن.
+9. برای Tableهای بلند، در Formatهایی که پشتیبانی می‌کنند Filter / Freeze اضافه کن.
+10. Theme پروژه فعلی را اعمال کن بدون تغییر Structure تأییدشده.
+11. بررسی کن که Missing Value ساخته نشده باشد.
 
-## Business-list baseline
+## Baseline فهرست کسب‌وکار
 
-Prefer:
+ترجیحاً:
 
 `ردیف → نام کسب‌وکار → نوع کاربردی → دسته‌بندی منبع → آدرس خلاصه → شماره تلفن → وب‌سایت → امتیاز → تعداد Review`
 
-Add task-specific fields only when they improve the output.
+Field اختصاصی فقط زمانی اضافه شود که خروجی را بهتر کند.
 
-## Structure vs theme
+## Structure در برابر Theme
 
-Preserve:
+حفظ شود:
 - RTL
-- order
-- hierarchy
-- alignment logic
-- numbering
-- table usability
+- ترتیب
+- Hierarchy
+- Alignment Logic
+- Numbering
+- Usability جدول
 
-Allow project-specific variation in:
-- colors
-- icons
-- fonts when required by the project
-- decorative styling
-- brand identity
+قابل‌تغییر بر اساس پروژه:
+- رنگ
+- آیکون
+- Font در صورت نیاز پروژه
+- Decoration
+- Brand Identity
 
 ## Verification
 
-- [ ] Persian RTL is enabled.
-- [ ] Row numbering is continuous.
-- [ ] Core columns are ordered intentionally.
-- [ ] Structured data cells are centered unless a justified exception exists.
-- [ ] Categories are understandable.
-- [ ] Duplicates/irrelevant rows were handled when required.
-- [ ] Missing data was not fabricated.
-- [ ] Theme changes did not change the information architecture.
+- [ ] RTL فارسی فعال است.
+- [ ] شماره ردیف پیوسته است.
+- [ ] Core Columnها ترتیب هدفمند دارند.
+- [ ] Structured Data Cellها Center هستند مگر استثنای موجه.
+- [ ] Categoryها برای کاربر قابل‌فهم هستند.
+- [ ] Duplicate / Record نامرتبط در صورت نیاز مدیریت شده‌اند.
+- [ ] Missing Data ساخته نشده است.
+- [ ] تغییر Theme باعث تغییر Information Architecture نشده است.
