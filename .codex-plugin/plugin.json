@@ -1,20 +1,20 @@
 {
   "name": "diaco-agent-skills",
-  "version": "0.6.0",
-  "description": "Reusable Diaco standards and workflows for project continuity, engineering tools, UI design engineering, local-business data, repeatable marketing workflows, testing, security review, Windows desktop apps, Supabase web apps, GitHub memory, and document automation.",
+  "version": "0.7.0",
+  "description": "Reusable Diaco standards and workflows for project continuity, engineering tools, UI design engineering, Persian structured-data presentation, local-business data, repeatable marketing workflows, testing, security review, Windows desktop apps, Supabase web apps, GitHub memory, and document automation.",
   "author": {"name":"Diaco"},
   "repository": "https://github.com/mohseniamin64exchange-commits/diaco-agent-skills",
   "skills": "./skills/",
   "interface": {
     "displayName": "Diaco Agent Skills",
-    "shortDescription": "Standards, reusable workflows, reviews, and platform profiles.",
-    "longDescription": "Diaco Agent Skills provides reusable standards and workflows for project continuity, safe code changes, engineering tool selection, UI design engineering, local-business discovery, repeatable marketing workflows, browser verification, security review, pull-request review, Windows desktop applications, Supabase web apps, GitHub-backed memory, and document automation.",
+    "shortDescription": "Standards, structured outputs, reusable workflows, reviews, and platform profiles.",
+    "longDescription": "Diaco Agent Skills provides reusable standards and workflows for project continuity, safe code changes, engineering tool selection, UI design engineering, Persian RTL structured-data presentation, local-business discovery, repeatable marketing workflows, browser verification, security review, pull-request review, Windows desktop applications, Supabase web apps, GitHub-backed memory, and document automation.",
     "developerName": "Diaco",
     "category": "Productivity",
     "capabilities": ["Interactive","Read","Write"],
     "defaultPrompt": [
-      "Use the appropriate Diaco standards, workflows, specialist references, and tools for this task",
-      "For repeatable marketing workflows, validate with a small measurable pilot before scaling or scheduling"
+      "Use the appropriate Diaco standards, approved working preferences, workflows, specialist references, and tools for this task",
+      "Preserve approved information structure while allowing project-specific colors, icons, and branding"
     ]
   }
 }
