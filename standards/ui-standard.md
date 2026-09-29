@@ -1,7 +1,7 @@
 # Diaco UI Standard
 
 **Status:** DRAFT  
-**Version:** 0.2
+**Version:** 0.3
 
 ## Goal
 
@@ -20,6 +20,11 @@ Build a reusable Diaco visual and interaction language so new applications do no
 - The user selects the visual direction. The Agent may explain tradeoffs but should not silently choose a universal Diaco style.
 - Motion should have a functional purpose and must not make frequent workflows feel slower.
 - Before adding a new UI library, inspect what the project already uses and avoid unnecessary dependency churn.
+- **Structure is more persistent than theme:** preserve approved information order, hierarchy, direction, and workflow even when colors, icons, or branding change.
+- For Persian-first data-heavy interfaces, RTL is the approved default.
+- For Persian data tables, structured values are centered by default unless a field clearly benefits from another alignment.
+- For Persian application shells, a right-side primary sidebar/navigation is the preferred baseline unless an approved project reference intentionally differs.
+- Approved structured-data behavior is defined in `structured-data-presentation-standard.md`.
 
 ## External reference hierarchy
 
@@ -36,6 +41,7 @@ External repositories provide specialist guidance; they do not define Diaco's vi
 See:
 - `references/emil-kowalski-skills.md`
 - `skills/ui-design-engineering/SKILL.md`
+- `standards/structured-data-presentation-standard.md`
 
 ## Where Emil Kowalski Skills is especially useful
 
@@ -56,13 +62,13 @@ The following are intentionally not yet fixed:
 - typography/font family and size scale
 - spacing scale
 - border radius/shadow rules
-- sidebar/header dimensions
+- exact sidebar/header dimensions
 - form field appearance
 - button hierarchy
-- table density and actions
+- table density and actions beyond the approved structured-data rules
 - modal/dialog appearance
 - toast/notification appearance
-- RTL/LTR behavior details
+- fine-grained RTL exceptions and mixed-language handling
 - Windows-specific controls and high-DPI rules
 - approved Diaco motion tokens/durations/easing values
 
@@ -73,8 +79,9 @@ When the user identifies a screen or project section as the desired reference:
 1. inspect the actual implementation/screens,
 2. record exact reusable choices,
 3. separate product-specific content from reusable design rules,
-4. use specialist references to improve craft without changing approved identity,
-5. add only approved reusable rules here,
-6. mark visual rules ACTIVE only after approval.
+4. separate **structure** from **theme**,
+5. use specialist references to improve craft without changing approved identity,
+6. add only approved reusable rules here,
+7. mark visual rules ACTIVE only after approval.
 
-Until then, do not claim a specific visual style is the Diaco standard.
+Until then, do not claim a specific visual theme is the Diaco standard.
