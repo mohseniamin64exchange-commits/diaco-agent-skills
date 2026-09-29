@@ -1,43 +1,43 @@
-# Babol Mechanics Excel — Approved Golden Template Reference
+# مرجع Golden Template اکسل مکانیکی‌های بابل
 
-## Reference file
+## فایل مرجع
 
-User-approved workbook:
+Workbook مورد تأیید کاربر:
 
 `babol_mechanics_clean_rtl.xlsx`
 
-Observed SHA-256:
+SHA-256 مشاهده‌شده:
 
 `8d35f73dc9fc12f8f961c68c5a1a475a68041456b77a09e3c2dfe5cff46c6f3a`
 
-This reference records the reusable structure observed in that workbook. The source workbook itself remains a user-provided reference artifact.
+این فایل Reference ساختار قابل‌استفاده مجددی را که از Workbook تأییدشده استخراج شده ثبت می‌کند. خود Workbook یک Artifact مرجعِ ارائه‌شده توسط کاربر است.
 
-## Observed workbook structure
+## ساختار مشاهده‌شده Workbook
 
 Worksheet:
 - `تعمیرگاه‌های بابل`
 
-Used range:
+Used Range:
 - `A1:I44`
 
-Direction and view:
-- RTL enabled
-- gridlines hidden
-- rows 1–4 frozen; data begins at row 5
+Direction و View:
+- RTL فعال
+- Gridline مخفی
+- ردیف‌های 1 تا 4 Freeze؛ Data از ردیف 5 شروع می‌شود
 
-Merged presentation:
-- `A1:I1` — title
-- `A2:I2` — subtitle
-- row 3 — visual separator
-- row 4 — table headers
+Presentation ادغام‌شده:
+- `A1:I1` — Title
+- `A2:I2` — Subtitle
+- ردیف 3 — Separator بصری
+- ردیف 4 — Headerهای Table
 
 Table:
-- range `A4:I44`
-- filtering enabled
-- row striping enabled
-- current table style: `TableStyleMedium2`
+- Range برابر `A4:I44`
+- Filtering فعال
+- Row Striping فعال
+- Table Style فعلی: `TableStyleMedium2`
 
-## Approved column order
+## ترتیب تأییدشده ستون‌ها
 
 1. `ردیف`
 2. `نام کسب‌وکار`
@@ -49,30 +49,30 @@ Table:
 8. `امتیاز Google`
 9. `تعداد Review`
 
-The semantic pattern is more important than the exact subject-specific wording:
-- ordinal
-- primary entity name
-- useful human classification
-- source/original category
-- concise location
-- phone
-- website
-- rating
-- review count
+Pattern معنایی مهم‌تر از wording اختصاصی Subject است:
+- شماره ردیف
+- نام اصلی Entity
+- Classification کاربردی برای انسان
+- Category اصلی منبع
+- Location خلاصه
+- Phone
+- Website
+- Rating
+- Review Count
 
-## Observed alignment and typography
+## Alignment و Typography مشاهده‌شده
 
-- title: centered, bold, Arial 15
-- subtitle: centered, italic, Arial 10
-- header: centered, bold, Arial 10
-- body: centered, Arial 10
-- header wrapping enabled
-- rating format: one decimal place
-- row numbering: continuous starting at 1
+- Title: Center، Bold، Arial 15
+- Subtitle: Center، Italic، Arial 10
+- Header: Center، Bold، Arial 10
+- Body: Center، Arial 10
+- Wrap Text برای Header فعال
+- Rating Format: یک رقم اعشار
+- شماره‌گذاری ردیف: پیوسته از 1
 
-## Observed sizing
+## اندازه‌های مشاهده‌شده
 
-Column widths:
+Column Width:
 - A: 7
 - B: 28
 - C: 22
@@ -83,37 +83,37 @@ Column widths:
 - H: 14
 - I: 14
 
-Key row heights:
-- row 1: 30
-- row 2: 21.95
-- row 4: 27.95
+Row Heightهای مهم:
+- ردیف 1: 30
+- ردیف 2: 21.95
+- ردیف 4: 27.95
 
-## Observed current visual skin
+## ظاهر فعلی Reference
 
-Current header/tab accent is based on dark blue `#1F4E78` with white header text.
+Accent فعلی Header / Tab بر پایه آبی تیره `#1F4E78` با متن سفید است.
 
-This color is **reference-specific, not a universal Diaco color**.
+این رنگ **فقط متعلق به Reference فعلی است و رنگ عمومی Diaco محسوب نمی‌شود**.
 
-The user explicitly approved:
-- the structure,
-- RTL behavior,
-- centered data presentation,
-- ordering,
-- numbering,
-- clean table organization.
+کاربر به‌صراحت این موارد را تأیید کرده است:
+- Structure
+- رفتار RTL
+- Center بودن Data
+- ترتیب
+- شماره‌گذاری
+- نظم Table
 
-The user explicitly allows these to change by project:
-- colors,
-- icons,
-- branding,
-- visual decoration.
+مواردی که می‌توانند در هر پروژه تغییر کنند:
+- رنگ‌ها
+- آیکون‌ها
+- Branding
+- Decoration
 
-## Reuse rule
+## قاعده استفاده مجدد
 
-When the user asks for:
-- "خروجی استاندارد من"
-- "طبق ساختار اکسل من"
-- "مثل فایل قبلی مرتبش کن"
-- or an equivalent request for a Persian structured list,
+وقتی کاربر می‌گوید:
+- «خروجی استاندارد من»
+- «طبق ساختار اکسل من»
+- «مثل فایل قبلی مرتبش کن»
+- یا عبارت معادل برای یک Persian Structured List
 
-reuse the structural rules in `standards/structured-data-presentation-standard.md` and adapt the theme to the current project.
+قواعد Structure موجود در `standards/structured-data-presentation-standard.md` را دوباره استفاده کن و Theme را با پروژه فعلی تطبیق بده.
