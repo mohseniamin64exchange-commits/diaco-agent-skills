@@ -1,66 +1,66 @@
 ---
 name: using-diaco-skills
-description: Routes work to the appropriate Diaco standards, workflows, platform profile, and approved tools/references.
+description: Task را به Standard، Workflow، Platform Profile و Tool / Reference مناسب در Diaco هدایت می‌کند.
 ---
 
 # Using Diaco Skills
 
-## Skill routing
+## مسیریابی Skill
 
-- Continuing work across sessions or Agents → `project-context-handoff`
-- GitHub durable memory → `github-project-memory`
-- Shared UI consistency → `shared-ui-system`
-- Persian Excel/list/table output → `structured-data-output`
-- UI polish / animation / prototyping / UI review → `ui-design-engineering`
-- Local business / supplier / lead discovery → `local-business-data`
-- Repeatable/automated marketing workflows → `automated-marketing-growth`
-- Safe changes in existing codebases → `safe-existing-project-change`
-- Supabase web apps → `supabase-webapp-guardrails`
-- Windows desktop apps → `windows-desktop-standard`
-- PR review → `pull-request-review`
-- Authorized security review → `security-review`
-- Word/document automation → `document-r-automation`
+- ادامه کار بین Sessionها یا Agentها → `project-context-handoff`
+- GitHub Durable Memory → `github-project-memory`
+- یکدستی Shared UI → `shared-ui-system`
+- خروجی فارسی Excel / List / Table → `structured-data-output`
+- UI Polish / Animation / Prototyping / UI Review → `ui-design-engineering`
+- Local Business / Supplier / Lead Discovery → `local-business-data`
+- Marketing Workflow تکرارشونده یا خودکار → `automated-marketing-growth`
+- تغییر امن در Codebase موجود → `safe-existing-project-change`
+- Supabase Web App → `supabase-webapp-guardrails`
+- Windows Desktop App → `windows-desktop-standard`
+- PR Review → `pull-request-review`
+- Security Review مجاز → `security-review`
+- Word / Document Automation → `document-r-automation`
 
-## Standard routing
+## مسیریابی Standard
 
-- Persian structured tables / lead lists / spreadsheet layout → `standards/structured-data-presentation-standard.md`
+- Persian Structured Table / Lead List / Spreadsheet Layout → `standards/structured-data-presentation-standard.md`
 - General UI → `standards/ui-standard.md`
-- Tool selection → `standards/engineering-toolchain-standard.md`
+- Tool Selection → `standards/engineering-toolchain-standard.md`
 - Testing → `standards/testing-standard.md`
 - Security → `standards/security-review-standard.md`
 - Release → `standards/release-standard.md`
 
-## Tool/reference routing
+## مسیریابی Tool / Reference
 
-- Current external library/API documentation → Context7
-- Web browser verification → Playwright CLI
-- Supabase operations → official Supabase MCP
-- UI design engineering → Emil Kowalski Skills
-- Additional UI reference → UI Skills
-- Local business data → `Mahanaicoach/google-maps-scraper-kit`
-- Marketing/growth execution → `coreyhaines31/marketingskills`
-- Authorized security automation → Strix
+- Documentation فعلی Library / API → Context7
+- Web Browser Verification → Playwright CLI
+- Supabase Operation → official Supabase MCP
+- UI Design Engineering → Emil Kowalski Skills
+- UI Reference تکمیلی → UI Skills
+- Local Business Data → `Mahanaicoach/google-maps-scraper-kit`
+- Marketing / Growth Execution → `coreyhaines31/marketingskills`
+- Authorized Security Automation → Strix
 
-## Marketing combination
+## ترکیب Marketing
 
-When the user wants automated marketing:
-1. load `automated-marketing-growth`
-2. establish product-marketing context
-3. use Google Maps Scraper Kit for discovery if local-business data is needed
-4. use Marketing Skills for qualification/strategy/content/outreach preparation
-5. use `structured-data-output` for Persian list/spreadsheet delivery
-6. test on a small pilot
-7. automate only after measurable validation
+وقتی کاربر Marketing Automation می‌خواهد:
+1. `automated-marketing-growth` را Load کن.
+2. Product Marketing Context را مشخص کن.
+3. در صورت نیاز به Local Business Data از Google Maps Scraper Kit استفاده کن.
+4. برای Qualification / Strategy / Content / Outreach Preparation از Marketing Skills استفاده کن.
+5. برای خروجی فارسی List / Spreadsheet از `structured-data-output` استفاده کن.
+6. ابتدا Pilot کوچک اجرا کن.
+7. فقط بعد از Validation قابل‌اندازه‌گیری Automation را Scale کن.
 
-## Shared rules
+## قواعد مشترک
 
-1. Inspect current repository/data state.
-2. Load only relevant standards, skills, and tools.
-3. Project-specific rules override generic Diaco defaults.
-4. Read `00-AI-HUB/WORKING-PREFERENCES.md` when reusable user preferences matter.
-5. Do not invent missing state.
-6. Keep changes scoped and reversible.
-7. Verify before declaring completion.
-8. Persist important state.
-9. Preserve approved structure even when the project theme changes.
-10. For marketing automation, do not scale before a pilot passes quality checks.
+1. وضعیت فعلی Repository / Data را بررسی کن.
+2. فقط Standard، Skill و Tool مرتبط را Load کن.
+3. Ruleهای Project-specific بر Default عمومی Diaco اولویت دارند.
+4. وقتی ترجیحات قابل‌استفاده مجدد کاربر مهم است، `00-AI-HUB/WORKING-PREFERENCES.md` را بخوان.
+5. Missing State را نساز.
+6. تغییرات را Scoped و برگشت‌پذیر نگه دار.
+7. پیش از اعلام اتمام، Verify کن.
+8. State مهم را Persist کن.
+9. با تغییر Theme، Structure تأییدشده را حفظ کن.
+10. Marketing Automation پیش از قبولی Pilot Scale نشود.
