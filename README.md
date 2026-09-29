@@ -1,22 +1,44 @@
 # Diaco Agent Skills
 
-مجموعه Workflowها، Standardهای مشترک، ابزارهای مهندسی، Referenceهای Design Engineering، Business Data Tooling، Structured Data Presentation و Marketing Workflowهای قابل‌تکرار برای پروژه‌های مبتنی بر AI.
+مجموعه Workflowها، Standardهای مشترک، ابزارهای مهندسی، Referenceهای Design Engineering، UI Prototyping، Business Data Tooling، Structured Data Presentation و Marketing Workflowهای قابل‌تکرار برای پروژه‌های مبتنی بر AI.
 
-**نسخه فعلی:** 0.7.0
+**نسخه فعلی:** 0.8.0
 
 ## قابلیت‌های مهم
 
 - تداوم پروژه و GitHub-backed Memory
 - Platform Profileهای Windows و Supabase
 - UI Design Engineering
+- **Rapid UI Prototyping / Screen Flow با M3E Canvas**
 - **نمایش Structured Data فارسیِ تأییدشده**
 - Local Business و Supplier Discovery
 - Marketing و Growth Workflowهای قابل‌تکرار
 - Testing، Security Review و PR Review
 
+## UI Prototyping Workflow
+
+Diaco اکنون `lnkiai/m3e-canvas` را به‌عنوان **Priority UI Prototyping / Screen-Flow Tool** ثبت می‌کند.
+
+Flow ترجیحی:
+
+```text
+Approved Diaco / Project structure
+→ M3E Canvas prototype
+→ User review / selection
+→ Prompt or implementation brief
+→ Coding Agent implementation
+→ Real browser/device/platform verification
+```
+
+M3E Canvas برای سریع دیدن فرم‌ها، Screenها و Navigation قبل از Coding است؛ مرجع اجباری Theme نهایی Diaco نیست.
+
+Reference:
+- `references/m3e-canvas.md`
+- `skills/ui-design-engineering/SKILL.md`
+
 ## مدل تأییدشده Presentation بین پروژه‌ها
 
-Diaco اکنون این دو لایه را به‌صراحت جدا می‌کند:
+Diaco این دو لایه را به‌صراحت جدا می‌کند:
 
 **Structure**
 - ترتیب اطلاعات
@@ -88,8 +110,9 @@ Skillهای مرتبط:
 4. پیش از تغییر پروژه موجود، وضعیت واقعی آن را بررسی کن.
 5. Scope و رفتار سالم موجود را حفظ کن.
 6. Structure تأییدشده را حتی با تغییر Theme حفظ کن.
-7. تغییرات را با Evidence Verify کن.
-8. Specialized Tool فقط در صورت مرتبط بودن استفاده شود.
-9. Secret در Git ذخیره نشود.
-10. Workflow قبل از Pilot موفق Scale نشود.
-11. Data واقعی Business / Project / Customer از Generic Assumption مدل معتبرتر است.
+7. برای UI نامطمئن، Prototype قبل از Production Coding ترجیح دارد.
+8. تغییرات را با Evidence Verify کن.
+9. Specialized Tool فقط در صورت مرتبط بودن استفاده شود.
+10. Secret در Git ذخیره نشود.
+11. Workflow قبل از Pilot موفق Scale نشود.
+12. Data واقعی Business / Project / Customer از Generic Assumption مدل معتبرتر است.
