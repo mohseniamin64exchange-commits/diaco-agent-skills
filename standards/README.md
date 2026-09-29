@@ -1,48 +1,48 @@
-# Diaco Standards Registry
+# Registry استانداردهای Diaco
 
-This directory contains reusable standards shared across Diaco projects.
+این پوشه شامل Standardهای قابل‌استفاده مجدد در پروژه‌های Diaco است.
 
-## Status model
+## مدل وضعیت
 
-Each standard is marked with one of these states:
+هر Standard یکی از وضعیت‌های زیر را دارد:
 
-- **ACTIVE** — approved baseline; use by default when relevant.
-- **DRAFT** — structure exists, but details are not yet approved as a universal Diaco standard.
-- **PROJECT-REFERENCE** — a project may be used as the current reference implementation until the rule is promoted to ACTIVE.
-- **DEPRECATED** — retained only for migration/history.
+- **ACTIVE** — Baseline تأییدشده؛ در صورت مرتبط بودن به‌صورت پیش‌فرض استفاده شود.
+- **DRAFT** — ساختار اولیه وجود دارد، اما جزئیات آن هنوز به‌عنوان استاندارد عمومی Diaco تأیید نشده است.
+- **PROJECT-REFERENCE** — یک پروژه می‌تواند تا زمان ارتقای قاعده به ACTIVE به‌عنوان مرجع Implementation استفاده شود.
+- **DEPRECATED** — فقط برای Migration یا History نگه داشته می‌شود.
 
-## Rule
+## قاعده
 
-Do not invent missing standards.
+Standard گمشده را اختراع نکن.
 
-If a standard is DRAFT:
-1. inspect the real project/reference implementation,
-2. extract the repeated pattern,
-3. ask for approval when the pattern would become universal,
-4. then promote the rule to ACTIVE.
+اگر یک Standard در وضعیت DRAFT است:
+1. Implementation یا Reference واقعی را بررسی کن،
+2. Pattern تکرارشونده را استخراج کن،
+3. اگر قرار است عمومی شود، تأیید بگیر،
+4. سپس فقط قاعده تأییدشده را به ACTIVE ارتقا بده.
 
-## Current standards
+## Standardهای فعلی
 
-| Standard | Status | Purpose |
+| Standard | وضعیت | کاربرد |
 |---|---|---|
-| [Project Standard](project-standard.md) | ACTIVE | Minimum structure and project continuity |
-| [Structured Data Presentation Standard](structured-data-presentation-standard.md) | ACTIVE | Persian RTL structured data, table ordering, numbering and structure-vs-theme rules |
-| [UI Standard](ui-standard.md) | DRAFT | Shared visual and interaction language |
-| [Print Standard](print-standard.md) | DRAFT | Reusable print/preview conventions |
-| [Backup & Restore Standard](backup-restore-standard.md) | DRAFT | Reusable backup and restore behavior |
-| [User Management Standard](user-management-standard.md) | DRAFT | Reusable users/roles/permissions patterns |
-| [Windows App Standard](windows-app-standard.md) | ACTIVE | Windows desktop platform baseline |
-| [Testing Standard](testing-standard.md) | ACTIVE | Minimum verification discipline |
-| [Engineering Toolchain Standard](engineering-toolchain-standard.md) | ACTIVE | Context7, Playwright CLI, Supabase MCP, UI references, business-data and marketing tool-selection policy |
-| [Pull Request Review Standard](pull-request-review-standard.md) | ACTIVE | Diff-based pre-merge quality gate |
-| [Security Review Standard](security-review-standard.md) | ACTIVE | Authorized application-security review |
-| [Release Standard](release-standard.md) | ACTIVE | Versioning, release, rollback and handoff |
+| [Project Standard](project-standard.md) | ACTIVE | حداقل ساختار پروژه و تداوم کار |
+| [Structured Data Presentation Standard](structured-data-presentation-standard.md) | ACTIVE | RTL فارسی، ترتیب جدول، شماره‌گذاری و تفکیک Structure از Theme |
+| [UI Standard](ui-standard.md) | DRAFT | زبان مشترک بصری و تعاملی |
+| [Print Standard](print-standard.md) | DRAFT | قواعد قابل‌استفاده مجدد Print / Preview |
+| [Backup & Restore Standard](backup-restore-standard.md) | DRAFT | رفتار Backup و Restore |
+| [User Management Standard](user-management-standard.md) | DRAFT | الگوهای Users / Roles / Permissions |
+| [Windows App Standard](windows-app-standard.md) | ACTIVE | Baseline برنامه‌های Windows Desktop |
+| [Testing Standard](testing-standard.md) | ACTIVE | حداقل انضباط Verification |
+| [Engineering Toolchain Standard](engineering-toolchain-standard.md) | ACTIVE | سیاست انتخاب Context7، Playwright CLI، Supabase MCP، ابزارهای UI، Business Data و Marketing |
+| [Pull Request Review Standard](pull-request-review-standard.md) | ACTIVE | کنترل کیفیت Diff پیش از Merge |
+| [Security Review Standard](security-review-standard.md) | ACTIVE | Security Review در محیط مجاز |
+| [Release Standard](release-standard.md) | ACTIVE | Versioning، Release، Rollback و Handoff |
 
-## Promotion rule
+## قاعده ارتقا
 
-A pattern should be considered for Diaco standardization when:
-- it is reused in more than one project, or
-- the user explicitly says it should become the standard, or
-- it is a foundational cross-project rule such as handoff, security, testing, data presentation, or Git discipline.
+یک Pattern زمانی کاندید Standard شدن در Diaco است که:
+- در بیش از یک پروژه تکرار شده باشد، یا
+- کاربر صراحتاً بگوید باید Standard شود، یا
+- یک قاعده بنیادی بین‌پروژه‌ای مانند Handoff، Security، Testing، Data Presentation یا Git Discipline باشد.
 
-Project-specific exceptions remain allowed and must be documented in that project's `AGENTS.md`.
+استثناهای هر پروژه همچنان مجازند و باید در `AGENTS.md` همان پروژه ثبت شوند.
