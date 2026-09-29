@@ -1,43 +1,45 @@
 ---
 name: local-business-data
-description: Uses approved Diaco tooling to collect, clean, verify, and export local-business listing data for research, supplier discovery, lead generation, and CRM enrichment. Prefer the registered Google Maps Scraper Kit when appropriate.
+description: با Toolهای تأییدشده Diaco، داده Local Business را برای Research، Supplier Discovery، Lead Generation و CRM Enrichment جمع‌آوری، پاک‌سازی، Verify و Export می‌کند. در صورت مناسب بودن Google Maps Scraper Kit ثبت‌شده ترجیح دارد.
 ---
 
 # Local Business Data
 
-## Preferred tool
+## Tool ترجیحی
 
-Primary registered tool:
+Tool اصلی ثبت‌شده:
+
 `Mahanaicoach/google-maps-scraper-kit`
 
 Reference:
+
 `references/google-maps-scraper-kit.md`
 
-## Use when
+## موارد استفاده
 
-- finding businesses by category and location
-- supplier/vendor discovery
-- local market research
-- prospect/lead list creation
-- enriching business records
-- comparing local competitors
+- یافتن Business بر اساس Category و Location
+- Supplier / Vendor Discovery
+- Local Market Research
+- ساخت Prospect / Lead List
+- Enrichment رکوردهای Business
+- مقایسه Competitorهای محلی
 
 ## Workflow
 
-1. Clarify business type and geographic scope.
-2. Decide which fields are actually needed.
-3. Prefer a small validation run first.
-4. Run a targeted scrape.
-5. Clean and deduplicate results.
-6. Create a useful human-facing classification when raw source categories are too technical.
-7. Verify high-value records when necessary.
-8. Export using the project's requested format.
-9. For Persian spreadsheet/list output, load `structured-data-output`.
-10. Record the source and date when results may be reused.
+1. نوع Business و محدوده جغرافیایی را مشخص کن.
+2. Fieldهای واقعاً موردنیاز را تعیین کن.
+3. ابتدا Validation Run کوچک را ترجیح بده.
+4. Scrape هدفمند اجرا کن.
+5. Resultها را Clean و Deduplicate کن.
+6. وقتی Source Category بیش از حد Technical است، Classification قابل‌فهم برای انسان بساز.
+7. Recordهای مهم را در صورت نیاز Verify کن.
+8. بر اساس Format درخواستی پروژه Export کن.
+9. برای Spreadsheet / List فارسی، `structured-data-output` را Load کن.
+10. اگر Result قرار است دوباره استفاده شود، Source و Date را ثبت کن.
 
-## Preferred business-list fields
+## Fieldهای ترجیحی Business List
 
-For Persian user-facing output, prefer:
+برای خروجی فارسی:
 
 1. ردیف
 2. نام کسب‌وکار
@@ -49,30 +51,30 @@ For Persian user-facing output, prefer:
 8. امتیاز
 9. تعداد Review
 
-Add email, coordinates, socials, query source, or other fields only when the task benefits from them.
+Email، Coordinate، Social، Query Source یا Field دیگر فقط در صورت مفید بودن اضافه شود.
 
-## Presentation rule
+## قاعده Presentation
 
-For Persian Excel/list output use:
+برای Excel / List فارسی از این‌ها استفاده کن:
 - `standards/structured-data-presentation-standard.md`
 - `skills/structured-data-output/SKILL.md`
 - `references/babol-mechanics-excel-golden-template.md`
 
-Structure is reusable; colors and branding may vary.
+Structure قابل‌استفاده مجدد است؛ Color و Branding می‌توانند تغییر کنند.
 
-## Diaco defaults
+## Defaultهای Diaco
 
-- light use by default
-- one job at a time
-- avoid unnecessary high depth
-- avoid repeated mass scraping
-- do not install a separate scraper copy into every application
-- prefer a reusable local/server service when this becomes a shared Agent capability
+- استفاده سبک به‌صورت پیش‌فرض
+- یک Job در هر لحظه
+- پرهیز از Depth غیرضروری
+- پرهیز از Mass Scraping تکراری
+- نصب نکردن نسخه جداگانه Scraper داخل هر App
+- اگر این Capability مشترک شد، ترجیحاً یک Local / Server Service قابل‌استفاده مجدد داشته باشد
 
-## Safety/data-quality
+## Data Quality / Safety
 
-- scraped data may be stale or incomplete
-- verify important contact or supplier records before operational use
-- comply with applicable privacy, marketing, and platform rules
-- scraping results do not imply permission for automated bulk contact
-- never invent missing contact information to complete a row
+- Scraped Data ممکن است قدیمی یا ناقص باشد
+- Contact / Supplier مهم پیش از استفاده عملی Verify شود
+- Privacy، Marketing و Platform Ruleهای مرتبط رعایت شوند
+- وجود Contact Data به معنی Consent برای Bulk Outreach نیست
+- برای کامل شدن Row، Contact Information گمشده ساخته نشود
