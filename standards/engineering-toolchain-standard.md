@@ -1,7 +1,7 @@
 # Diaco Engineering Toolchain Standard
 
 **Status:** ACTIVE  
-**Version:** 0.4
+**Version:** 0.5
 
 ## Goal
 
@@ -23,6 +23,38 @@ Use for UI polish, motion, prototyping, and design-engineering review.
 
 ### UI Skills
 Use as an additional UI/frontend reference.
+
+### M3E Canvas — priority UI Prototyping / Screen-Flow tool
+
+Primary source:
+`lnkiai/m3e-canvas`
+
+Use for:
+- rapid screen sketching before production coding
+- phone/desktop screen exploration
+- multi-screen navigation flows
+- interaction preview
+- trying alternate UI directions
+- turning a chosen prototype into a prompt/spec for a coding Agent
+
+Preferred workflow:
+1. load approved Diaco/project structure
+2. prototype one or more screens/flows
+3. let the user review/select
+4. export/derive prompt or implementation brief
+5. implement in the real project stack
+6. verify with the real platform/browser/device
+
+Rules:
+- M3E Canvas is a prototyping tool, not Diaco's visual authority
+- preserve approved RTL, right-side navigation, field order, table/form structure, and other user-approved structure
+- its Material 3 Expressive defaults must not silently replace an approved project design
+- do not install/copy it into every project; use upstream/live/local shared deployment as appropriate
+- treat prototype output as a handoff artifact, not proof of production quality
+
+See:
+- `references/m3e-canvas.md`
+- `skills/ui-design-engineering/SKILL.md`
 
 ### Google Maps Scraper Kit — priority Local Business Data tool
 
@@ -70,9 +102,9 @@ Use for:
 - marketing loops
 
 Rule:
-- build product-marketing context first when downstream work depends on product/audience/positioning.
-- real business/product/customer data remains authoritative.
-- do not treat generated output as successful until measurable validation exists.
+- build product-marketing context first when downstream work depends on product/audience/positioning
+- real business/product/customer data remains authoritative
+- do not treat generated output as successful until measurable validation exists
 
 See:
 - `references/marketing-skills.md`
@@ -108,6 +140,6 @@ Use as a Diaco-owned quality gate.
 
 1. Project-specific rules and real business/project data
 2. Current repository state
-3. Diaco ACTIVE standards
+3. Diaco ACTIVE standards and approved working preferences
 4. Specialist external references/tools
 5. Generic Agent assumptions
