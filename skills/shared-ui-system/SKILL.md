@@ -1,93 +1,93 @@
 ---
 name: shared-ui-system
-description: Preserves a consistent reusable UI language across Diaco applications. Use when designing a new application, adding screens/components, or reusing navigation, forms, tables, dialogs, layout, typography, colors, and interaction patterns across projects.
+description: زبان UI قابل‌استفاده مجدد را در برنامه‌های Diaco حفظ می‌کند. برای طراحی App جدید، اضافه کردن Screen یا Component، یا استفاده مجدد از Navigation، Form، Table، Dialog، Layout، Typography، Color و Interaction Pattern استفاده شود.
 ---
 
 # Shared UI System
 
-## Goal
+## هدف
 
-A new Diaco application should reuse an established information and interaction structure instead of inventing a new interface in every chat.
+برنامه جدید Diaco باید از Structure اطلاعاتی و تعاملی تأییدشده استفاده مجدد کند، نه اینکه در هر Chat یک Interface کاملاً جدید اختراع شود.
 
-## Core distinction
+## تفکیک اصلی
 
-**Structure and theme are separate layers.**
+**Structure و Theme دو لایه جدا هستند.**
 
-Preserve structure when it is approved:
-- information order
-- navigation placement
-- field hierarchy
-- table/form organization
-- RTL/LTR behavior
-- interaction flow
+وقتی Structure تأیید شده، این موارد حفظ شوند:
+- ترتیب اطلاعات
+- محل Navigation
+- Hierarchy فیلدها
+- سازمان Table / Form
+- رفتار RTL / LTR
+- Interaction Flow
 
-Allow theme variation:
-- colors
-- icons
-- branding
-- decorative styling
-- shadows/radii where project-specific
+Theme می‌تواند تغییر کند:
+- رنگ
+- آیکون
+- Branding
+- Decoration
+- Shadow / Radius در صورت Project-specific بودن
 
-A different theme is not a reason to redesign an approved structure.
+صرف متفاوت بودن Theme دلیل تغییر Structure نیست.
 
-## Before building UI
+## قبل از ساخت UI
 
-1. Read the Diaco UI Standard.
-2. Read `standards/structured-data-presentation-standard.md` for data-heavy Persian screens.
-3. Look for an approved project/reference implementation.
-4. Inspect representative working screens/components.
-5. Identify reusable tokens and reusable structures.
-6. If the task involves polish, animation, prototyping, UI-library choice, or mobile-web behavior, load `ui-design-engineering`.
+1. Diaco UI Standard را بخوان.
+2. برای Screenهای فارسی داده‌محور، `standards/structured-data-presentation-standard.md` را بخوان.
+3. Reference یا Implementation تأییدشده پروژه را پیدا کن.
+4. Screen / Component واقعی و نماینده را بررسی کن.
+5. Tokenها و Structureهای قابل‌استفاده مجدد را مشخص کن.
+6. اگر Task شامل Polish، Animation، Prototyping، UI-library choice یا Mobile-Web Behavior است، `ui-design-engineering` را Load کن.
 
-## Persian baseline
+## Baseline فارسی
 
-For Persian-first interfaces:
-- use RTL by default,
-- prefer right-side primary navigation/sidebar unless an approved project reference differs,
-- keep repeated forms/tables in a consistent information order,
-- center structured table values by default.
+برای Interfaceهای فارسی:
+- RTL حالت پیش‌فرض است،
+- Sidebar / Navigation اصلی سمت راست ترجیح دارد مگر Reference پروژه متفاوت باشد،
+- Form و Tableهای تکرارشونده ترتیب اطلاعات یکسان داشته باشند،
+- Structured Table Valueها به‌صورت پیش‌فرض Center باشند.
 
-## Priority Design Engineering reference
+## Reference اولویت‌دار Design Engineering
 
-`emilkowalski/skills` is Diaco's **Priority UI / Design Engineering Reference**.
+`emilkowalski/skills`، **Priority UI / Design Engineering Reference** در Diaco است.
 
-Use it especially for:
-- UI polish
-- animation decisions and review
-- isolated multi-variant prototyping
-- component/library selection
-- mobile-web interaction details
-- React Native/Expo motion where relevant
+به‌ویژه برای:
+- UI Polish
+- تصمیم و Review انیمیشن
+- Multi-variant Prototype در محیط جدا
+- انتخاب Component / Library
+- جزئیات Mobile-Web Interaction
+- Motion در React Native / Expo
 
-It is **not** the authority for Diaco's visual identity or approved information structure.
+اما مرجع هویت بصری Diaco یا Structure تأییدشده نیست.
 
-## Additional UI reference
+## Reference تکمیلی UI
 
-`adamtossell/ui-skills` may also be consulted for reusable design workflows and frontend practices.
+`adamtossell/ui-skills` نیز می‌تواند برای Workflowهای طراحی و Frontend Practice استفاده شود.
 
-## Precedence
+## اولویت
 
-1. approved project-specific UI/reference
-2. ACTIVE Diaco structure/UI rules
+1. UI / Reference تأییدشده پروژه
+2. Ruleهای ACTIVE مربوط به Structure / UI در Diaco
 3. Emil Kowalski Skills
-4. UI Skills and other external design references
+4. UI Skills و سایر Referenceهای بیرونی
 
-## Prototype rule
+## قاعده Prototype
 
-When the visual direction is undecided:
-- explore outside production code,
-- make variants genuinely different,
-- preserve approved information structure unless the user explicitly asks to compare structural alternatives,
-- let the user choose,
-- integrate only the selected direction.
+وقتی جهت بصری مشخص نیست:
+- Exploration خارج از Production Code انجام شود،
+- Variantها واقعاً متفاوت باشند،
+- Structure تأییدشده حفظ شود مگر اینکه کاربر صراحتاً مقایسه Structure بخواهد،
+- انتخاب نهایی با کاربر باشد،
+- فقط Variant انتخاب‌شده وارد Production شود.
 
 ## Verification
 
-- [ ] Existing shared patterns were inspected.
-- [ ] Approved structure was preserved.
-- [ ] Persian RTL/navigation/alignment rules were applied when relevant.
-- [ ] New values/components were introduced only when needed.
-- [ ] Loading/error/empty states are handled.
-- [ ] Responsive and keyboard behavior were checked where applicable.
-- [ ] External UI references did not silently override approved Diaco/project rules.
-- [ ] Theme changes did not silently change information architecture.
+- [ ] Patternهای Shared موجود بررسی شدند.
+- [ ] Structure تأییدشده حفظ شد.
+- [ ] قواعد RTL / Navigation / Alignment فارسی در صورت مرتبط بودن اعمال شدند.
+- [ ] Value یا Component جدید فقط در صورت نیاز اضافه شد.
+- [ ] Loading / Error / Empty State مدیریت شدند.
+- [ ] Responsive و Keyboard Behavior در صورت نیاز بررسی شدند.
+- [ ] Reference خارجی قواعد تأییدشده Diaco / Project را Override نکرد.
+- [ ] تغییر Theme باعث تغییر Information Architecture نشد.
