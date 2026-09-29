@@ -1,162 +1,162 @@
-# Diaco Agent Operating Rules
+# قواعد عملیاتی Agentهای Diaco
 
-## Source of truth
+## Source of Truth
 
-For project work, prefer this order when information conflicts:
+در صورت تعارض اطلاعات در کار پروژه، این ترتیب اولویت دارد:
 
-1. Current repository files and verified Git state
-2. Project-specific rules/specifications and approved project references
-3. Latest project handoff
-4. Approved Diaco standards and relevant skills
-5. Central hub global rules and approved working preferences
-6. Conversation history
+1. فایل‌های فعلی Repository و وضعیت Verifyشده Git
+2. Rule / Specification اختصاصی پروژه و Reference تأییدشده
+3. آخرین Handoff پروژه
+4. Standard و Skill تأییدشده Diaco
+5. Global Ruleهای HUB و Working Preferenceهای تأییدشده
+6. Conversation History
 
-Do not assume an old chat accurately reflects the current repository.
+Chat قدیمی را به‌عنوان نمایش قطعی وضعیت فعلی Repository فرض نکن.
 
-## Before modifying an existing project
+## پیش از تغییر پروژه موجود
 
-- inspect the target repository
-- read its README / AGENTS / rules / handoff
-- inspect the relevant files and tests
-- identify existing patterns before creating new ones
-- preserve unrelated working behavior
-- read `00-AI-HUB/WORKING-PREFERENCES.md` when cross-project presentation or workflow preferences matter
+- Repository هدف را بررسی کن
+- README / AGENTS / Rule / Handoff را بخوان
+- File و Test مرتبط را بررسی کن
+- قبل از ساخت Pattern جدید، Pattern موجود را پیدا کن
+- رفتار سالم نامرتبط را حفظ کن
+- وقتی Preference بین‌پروژه‌ای مهم است، `00-AI-HUB/WORKING-PREFERENCES.md` را بخوان
 
-## Standards layer
+## لایه Standard
 
-Before implementing a reusable feature, inspect `standards/README.md` and load the relevant standard.
+پیش از Implementation یک Feature قابل‌استفاده مجدد، `standards/README.md` و Standard مرتبط را بخوان.
 
-Examples:
-- project structure / onboarding → `standards/project-standard.md`
-- structured data / Persian tables / lead-list output → `standards/structured-data-presentation-standard.md`
-- UI/layout/components → `standards/ui-standard.md`
-- printing → `standards/print-standard.md`
-- backup/restore → `standards/backup-restore-standard.md`
-- users/roles/permissions → `standards/user-management-standard.md`
-- Windows application behavior → `standards/windows-app-standard.md`
-- testing/verification → `standards/testing-standard.md`
-- engineering tools → `standards/engineering-toolchain-standard.md`
-- pull-request review → `standards/pull-request-review-standard.md`
-- security review → `standards/security-review-standard.md`
-- release/version/rollback → `standards/release-standard.md`
+نمونه:
+- ساختار پروژه / Onboarding → `standards/project-standard.md`
+- Structured Data / Persian Table / Lead List → `standards/structured-data-presentation-standard.md`
+- UI / Layout / Component → `standards/ui-standard.md`
+- Printing → `standards/print-standard.md`
+- Backup / Restore → `standards/backup-restore-standard.md`
+- User / Role / Permission → `standards/user-management-standard.md`
+- Windows Application Behavior → `standards/windows-app-standard.md`
+- Testing / Verification → `standards/testing-standard.md`
+- Engineering Tool → `standards/engineering-toolchain-standard.md`
+- Pull Request Review → `standards/pull-request-review-standard.md`
+- Security Review → `standards/security-review-standard.md`
+- Release / Version / Rollback → `standards/release-standard.md`
 
-### Standard status rule
+### قاعده وضعیت Standard
 
-- **ACTIVE** means use it by default when relevant.
-- **DRAFT** means do not invent missing details. Use an approved real project/reference implementation, then promote only approved reusable rules.
-- Project-specific exceptions belong in the project's own `AGENTS.md`.
+- **ACTIVE** یعنی در صورت مرتبط بودن Default قابل‌استفاده است.
+- **DRAFT** یعنی Missing Detail را نساز؛ از Reference واقعی استفاده کن و فقط Rule تأییدشده را Promote کن.
+- Exception پروژه باید در `AGENTS.md` همان پروژه ثبت شود.
 
-## Approved presentation behavior
+## رفتار Presentation تأییدشده
 
-When relevant:
+در صورت مرتبط بودن:
 
-- preserve approved information structure even when the visual theme changes,
-- Persian structured data defaults to RTL,
-- structured Persian table values are centered by default,
-- numbered result lists start at 1 and continue without gaps unless filtering semantics require otherwise,
-- Persian application shells prefer right-side primary navigation unless a project-specific approved reference differs,
-- colors/icons/branding may vary by project without changing the approved information hierarchy.
+- Structure اطلاعاتی تأییدشده را حتی با تغییر Theme حفظ کن.
+- Structured Data فارسی به‌صورت پیش‌فرض RTL است.
+- Structured Persian Table Valueها به‌صورت پیش‌فرض Center هستند.
+- Result Listهای شماره‌دار از 1 شروع و پیوسته ادامه می‌یابند مگر Filter Semantics عمداً چیز دیگری بخواهد.
+- Shell فارسی ترجیحاً Navigation اصلی سمت راست دارد مگر Reference پروژه خلاف آن را تأیید کرده باشد.
+- Color / Icon / Branding می‌توانند تغییر کنند بدون اینکه Information Hierarchy تغییر کند.
 
-Use:
+استفاده کن:
 - `standards/structured-data-presentation-standard.md`
 - `skills/structured-data-output/SKILL.md`
 
-## Engineering tool and reference selection
+## انتخاب Engineering Tool و Reference
 
-Use specialized tools/references when they improve the current task; do not install everything everywhere.
+Specialized Tool فقط وقتی استفاده شود که Task را بهتر می‌کند؛ همه ابزارها را همه‌جا نصب نکن.
 
-- External library/API work → Context7 when available.
-- Web UI/browser verification → Playwright CLI when available.
-- Supabase project work → official Supabase MCP when connected and authorized.
-- UI polish, animation, prototyping, UI review, mobile-web craft, or UI-library choice → load `ui-design-engineering` and use `emilkowalski/skills` as the priority specialist reference.
-- Additional UI workflow ideas → UI Skills.
-- Authorized security review → Diaco security workflow and Strix when useful.
-- Significant change before merge/release → Diaco pull-request review workflow.
+- External Library / API → Context7 در صورت موجود بودن
+- Web UI / Browser Verification → Playwright CLI
+- Supabase Project → official Supabase MCP با Access مجاز
+- UI Polish / Animation / Prototype / UI Review / Mobile-Web / Library Choice → `ui-design-engineering` و `emilkowalski/skills`
+- UI Reference تکمیلی → UI Skills
+- Security Review مجاز → Diaco Security Workflow و Strix در صورت مفید بودن
+- تغییر مهم قبل از Merge / Release → Diaco Pull Request Review Workflow
 
-Approved project UI and Diaco standards always take precedence over external UI references.
+UI تأییدشده پروژه و Standardهای Diaco همیشه بر External Reference اولویت دارند.
 
-## During implementation
+## هنگام Implementation
 
-- keep changes scoped
-- prefer small, reversible steps
-- do not silently replace architecture
-- do not delete code merely because it appears unused
-- do not add dependencies without a reason
-- do not commit credentials or secrets
-- do not turn a DRAFT standard into a universal rule without evidence/approval
-- do not convert external UI taste into a Diaco-wide visual rule without approval
-- do not replace an approved information structure merely to make a theme look different
+- Scope را محدود نگه دار
+- Step کوچک و برگشت‌پذیر را ترجیح بده
+- Architecture را بی‌صدا جایگزین نکن
+- Code را فقط به‌خاطر ظاهراً unused بودن حذف نکن
+- Dependency بدون دلیل اضافه نکن
+- Credential / Secret Commit نکن
+- DRAFT Standard را بدون Evidence / Approval عمومی نکن
+- Taste یک External UI Reference را به Rule عمومی Diaco تبدیل نکن
+- صرفاً برای تغییر Theme، Structure تأییدشده را تغییر نده
 
-## Platform-aware rules
+## قواعد Platform-aware
 
-Diaco has one shared core and separate platform profiles.
+Diaco یک Core مشترک و Platform Profileهای جدا دارد.
 
-Before implementation, identify the actual project platform from the repository. Then apply only the relevant platform-specific skill(s).
+پیش از Implementation، Platform واقعی پروژه را از Repository تشخیص بده و فقط Skill مربوط را اعمال کن.
 
-Examples:
-- Windows desktop application → `skills/windows-desktop-standard/SKILL.md`
-- Supabase/web application → `skills/supabase-webapp-guardrails/SKILL.md`
+نمونه:
+- Windows Desktop → `skills/windows-desktop-standard/SKILL.md`
+- Supabase / Web → `skills/supabase-webapp-guardrails/SKILL.md`
 
 ## Verification
 
-A task is not complete merely because code was written.
+صرف نوشتن Code به معنی تکمیل Task نیست.
 
-Where applicable, verify:
+در صورت مرتبط بودن Verify کن:
 - build
 - tests
 - type checking
 - linting
 - runtime behavior
-- affected user flow
-- browser flow with Playwright CLI for web changes when useful
-- UI interaction/polish on the actual target platform
-- structured data ordering/RTL/alignment for data-heavy output
-- print/backup/restore behavior if changed
-- security impact for security-sensitive changes
+- user flow تحت تأثیر
+- browser flow با Playwright CLI
+- UI interaction / polish روی Platform واقعی
+- ordering / RTL / alignment در Structured Data
+- print / backup / restore در صورت تغییر
+- security impact در Change حساس
 
-If verification fails, record the failure instead of declaring success.
+در صورت Failure، آن را ثبت کن و Success اعلام نکن.
 
-## Cross-session persistence
+## Cross-session Persistence
 
-When work is likely to continue in another session or Agent:
-- update the project's handoff
-- record the current branch/commit when useful
-- record what changed
-- record what was verified
-- record unresolved problems
-- record the next action
-- record important do-not-change constraints
+اگر کار احتمالاً در Session یا Agent دیگری ادامه دارد:
+- Handoff پروژه را Update کن
+- Branch / Commit را در صورت مفید بودن ثبت کن
+- Change انجام‌شده را ثبت کن
+- Verification را ثبت کن
+- مشکل حل‌نشده را ثبت کن
+- Next Action را ثبت کن
+- Do-not-change Constraint مهم را ثبت کن
 
-## External repositories
+## Repositoryهای خارجی
 
-When adopting third-party work:
-- preserve attribution and licensing
-- record the original upstream
-- keep upstream and Diaco-customized versions distinguishable
-- avoid pretending third-party work was authored by Diaco
+هنگام استفاده از Third-party Work:
+- Attribution و License را حفظ کن
+- Upstream اصلی را ثبت کن
+- Upstream و نسخه سفارشی Diaco را جدا نگه دار
+- Third-party Work را به‌عنوان کار تولیدشده توسط Diaco جا نزن
 
-## Standard project adoption rule
+## قاعده استاندارد پذیرش پروژه
 
-Every Diaco-managed application repository should contain at minimum:
+هر Application که تحت Diaco مدیریت می‌شود باید حداقل شامل این دو فایل باشد:
 
 - `AGENTS.md`
 - `HANDOFF.md`
 
-New projects should start from:
+پروژه جدید باید از این Templateها شروع کند:
 - `templates/PROJECT-AGENTS.md`
 - `templates/PROJECT-HANDOFF.md`
 
-Existing projects can adopt this standard without restructuring the application.
+پروژه موجود می‌تواند بدون Restructure کردن App این Standard را بپذیرد.
 
-The standard startup order for an Agent working on a project is:
+ترتیب استاندارد شروع Agent:
 
-1. Central hub: `00-AI-HUB/AGENT-START-HERE.md`
-2. Approved working preferences: `00-AI-HUB/WORKING-PREFERENCES.md`
-3. Shared Diaco rules: `diaco-agent-skills/AGENTS.md`
-4. Relevant Diaco standard(s)
-5. Relevant Diaco skill(s), including the correct platform profile
-6. Project-specific `AGENTS.md`
-7. Project `HANDOFF.md`
-8. Actual repository files, tests, configuration, and Git state
+1. `00-AI-HUB/AGENT-START-HERE.md`
+2. `00-AI-HUB/WORKING-PREFERENCES.md`
+3. `diaco-agent-skills/AGENTS.md`
+4. Standardهای مرتبط Diaco
+5. Skillهای مرتبط و Platform Profile درست
+6. `AGENTS.md` اختصاصی پروژه
+7. `HANDOFF.md` پروژه
+8. File / Test / Config / Git State واقعی پروژه
 
-Project-specific rules take precedence over generic Diaco defaults when intentionally defined.
+Rule اختصاصی پروژه در صورت تعریف عمدی بر Default عمومی Diaco اولویت دارد.
