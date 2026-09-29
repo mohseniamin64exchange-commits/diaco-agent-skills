@@ -1,6 +1,6 @@
 ---
 name: automated-marketing-growth
-description: Builds and validates repeatable marketing workflows by combining local-business discovery, product marketing context, prospect qualification, messaging, and measurable evaluation. Use when the user wants marketing work to run repeatedly or with minimal manual effort.
+description: Builds and validates repeatable marketing workflows by combining local-business discovery, product marketing context, prospect qualification, messaging, structured output, and measurable evaluation.
 ---
 
 # Automated Marketing & Growth
@@ -14,14 +14,15 @@ Turn Diaco's marketing tools into a measurable workflow, not a content generator
 1. `Mahanaicoach/google-maps-scraper-kit` — business discovery
 2. `coreyhaines31/marketingskills` — marketing strategy and execution guidance
 3. project/customer/product data — source of truth
-4. CRM/spreadsheet/database — state and deduplication
-5. optional scheduler/Jarvis/Agent — orchestration
-6. human approval for outbound actions unless explicitly authorized otherwise
+4. `structured-data-output` — approved Persian list/spreadsheet presentation
+5. CRM/spreadsheet/database — state and deduplication
+6. optional scheduler/Jarvis/Agent — orchestration
+7. human approval for outbound actions unless explicitly authorized otherwise
 
 ## Default workflow
 
 ### Phase 1 — Product context
-Build or update the product-marketing context:
+Build or update product-marketing context:
 - what we sell
 - target customer
 - geography
@@ -31,16 +32,26 @@ Build or update the product-marketing context:
 - proof/constraints
 
 ### Phase 2 — Discovery
-Use the approved Google Maps scraper for a small targeted batch.
+Use the approved Google Maps scraper for a small targeted batch when local-business discovery is relevant.
 
 ### Phase 3 — Clean + qualify
 - deduplicate
 - remove obvious mismatches
 - verify important fields
+- create useful human-facing categories
 - score/segment leads using explicit criteria
 - keep reasons for inclusion/exclusion
 
-### Phase 4 — Marketing output
+### Phase 4 — Structured delivery
+For Persian list/spreadsheet output:
+- use `structured-data-output`
+- preserve approved field order
+- use RTL
+- number rows continuously
+- center structured data by default
+- keep visual theme flexible by project
+
+### Phase 5 — Marketing output
 Use the appropriate Marketing Skill:
 - prospecting
 - competitor profiling
@@ -52,12 +63,12 @@ Use the appropriate Marketing Skill:
 - ads
 - other relevant skill
 
-### Phase 5 — Human checkpoint
+### Phase 6 — Human checkpoint
 Before real outbound contact, bulk messaging, ad spend, or publication:
 - show the user the proposed audience/output
 - require approval unless a pre-approved automation policy exists
 
-### Phase 6 — Measure
+### Phase 7 — Measure
 Track:
 - number discovered
 - duplicate rate
@@ -79,25 +90,13 @@ Recommended first test:
 
 Manually inspect a meaningful sample and compare the pipeline against reality.
 
-### Pass criteria for discovery
-A pilot is promising when:
-- most records are genuinely in the requested category/location
-- duplicates are low after cleaning
-- core fields are usable
-- important records can be independently verified
+## Pass criteria
 
-### Pass criteria for marketing output
-A pilot is promising when:
-- messaging uses real product/lead context
-- outputs are specific rather than generic
-- a human reviewer would keep most of the output with minor edits
-- no invented facts, offers, customer claims, or unsupported personalization appear
-
-### Pass criteria for automation
-Only automate recurring runs after the pilot demonstrates:
+Automation should not scale until it demonstrates:
 - stable data collection
 - deterministic cleaning/deduplication
-- acceptable qualification quality
+- acceptable classification/qualification quality
+- useful structured output
 - useful marketing output
 - clear logging and recovery behavior
 
