@@ -3,107 +3,118 @@
 **Status:** ACTIVE  
 **Version:** 1.0
 
-## Goal
+## هدف
 
-Keep structured data outputs consistent across spreadsheets, reports, business lists, admin tables, and data-heavy application screens while allowing each project to use its own visual theme.
+یکدست کردن خروجی‌های Structured Data در Spreadsheet، Report، Business List، Admin Table و Screenهای داده‌محور، در حالی که هر پروژه بتواند Theme بصری خودش را داشته باشد.
 
-## Core principle
+## اصل اصلی
 
-**Structure is reusable. Theme is replaceable.**
+**Structure قابل‌استفاده مجدد است؛ Theme قابل‌تعویض است.**
 
-Do not confuse:
-- information architecture, ordering, alignment, direction, and behavior
-with
-- colors, icons, branding, shadows, and decoration.
+این دو را با هم اشتباه نکن:
 
-A project may change the visual skin without changing the approved information structure.
+**Structure**
+- Information Architecture
+- ترتیب
+- Alignment
+- Direction
+- Behavior
 
-## Persian data presentation
+**Theme**
+- رنگ
+- آیکون
+- Branding
+- Shadow
+- Decoration
 
-For Persian-first structured outputs:
+یک پروژه می‌تواند ظاهرش را تغییر دهد بدون اینکه Structure تأییدشده اطلاعات تغییر کند.
 
-- use RTL direction,
-- keep structured table cells centered by default,
-- keep headers clearly separated from data,
-- use predictable field order,
-- use continuous numbering starting at 1 when rows represent an ordered result set,
-- keep key identifiers and contact fields easy to scan,
-- prefer compact, readable information over unnecessary raw fields.
+## نمایش داده فارسی
 
-Exceptions are allowed when a field's semantics clearly require a different alignment or a project-specific approved reference says otherwise.
+برای خروجی‌های فارسی:
 
-## Business / lead-list core schema
+- Direction برابر RTL باشد،
+- سلول‌های Structured Table به‌صورت پیش‌فرض Center باشند،
+- Header از Data واضح جدا باشد،
+- ترتیب Fieldها قابل‌پیش‌بینی باشد،
+- در Result Setهای شماره‌دار، شماره‌گذاری از 1 شروع و پیوسته ادامه پیدا کند،
+- Identifier و Contact Fieldها سریع قابل‌اسکن باشند،
+- خروجی مختصر و خوانا باشد و Raw Field غیرضروری نمایش داده نشود.
 
-Preferred core order:
+اگر ماهیت یک Field به‌وضوح Alignment دیگری می‌طلبد یا Reference پروژه چیز دیگری را تأیید کرده، استثنا مجاز است.
+
+## Schema اصلی Business / Lead List
+
+ترتیب ترجیحی:
 
 1. `ردیف`
 2. `نام کسب‌وکار`
-3. human-friendly type/classification, e.g. `نوع تعمیرگاه`
-4. source category, e.g. `دسته‌بندی`
+3. نوع یا Classification قابل‌فهم برای کاربر، مثل `نوع تعمیرگاه`
+4. Category منبع، مثل `دسته‌بندی`
 5. `آدرس خلاصه`
 6. `شماره تلفن`
 7. `وب‌سایت`
-8. rating, e.g. `امتیاز Google`
-9. review count, e.g. `تعداد Review`
+8. Rating، مثل `امتیاز Google`
+9. Review Count، مثل `تعداد Review`
 
-Additional task-specific fields may be added, but preserve the core reading order when practical.
+Fieldهای اختصاصی Task می‌توانند اضافه شوند، اما تا حد امکان ترتیب اصلی حفظ شود.
 
-## Spreadsheet behavior
+## رفتار Spreadsheet
 
-For polished Persian list workbooks:
+برای Workbookهای فارسی و مرتب:
 
-- worksheet direction: RTL,
-- hide gridlines when a formatted table is used,
-- title and optional subtitle may span the table width,
-- leave visual separation between title/subtitle and the table header,
-- freeze the table header area for long lists,
-- enable filtering on the actual data table,
-- use readable fixed widths instead of uncontrolled autofit,
-- center headers and structured data by default,
-- use restrained borders/row banding for scanability,
-- preserve phone numbers as text when needed,
-- format ratings consistently,
-- never invent missing values.
+- Worksheet به‌صورت RTL باشد،
+- وقتی Table Formatting استفاده می‌شود Gridline مخفی شود،
+- Title و Subtitle اختیاری می‌توانند عرض Table را پوشش دهند،
+- بین Title / Subtitle و Header جدول فاصله بصری وجود داشته باشد،
+- برای Listهای بلند Header ناحیه Data Freeze شود،
+- Filter روی Table واقعی فعال باشد،
+- به‌جای Autofit کنترل‌نشده، Width خوانا و هدفمند استفاده شود،
+- Header و Structured Data به‌صورت پیش‌فرض Center باشند،
+- Border و Row Banding محدود و خوانا باشند،
+- Phone Number در صورت نیاز به‌صورت Text نگه داشته شود،
+- Rating با Format یکدست نمایش داده شود،
+- Missing Value هرگز ساخته نشود.
 
-## Application / website behavior
+## رفتار Application / Website
 
-For Persian data-heavy applications:
+برای Applicationهای فارسیِ داده‌محور:
 
-- RTL is the default reading direction,
-- right-side primary sidebar/navigation is the preferred baseline unless an approved project reference differs,
-- tables and forms should preserve consistent field ordering across screens,
-- structured table values are centered by default,
-- colors and icons may vary by project without changing the information hierarchy.
+- RTL جهت خواندن پیش‌فرض است،
+- Sidebar / Navigation اصلی سمت راست Baseline ترجیحی است مگر Reference تأییدشده پروژه متفاوت باشد،
+- Tableها و Formها در Screenهای مشابه ترتیب Field یکدست داشته باشند،
+- Structured Table Valueها به‌صورت پیش‌فرض Center باشند،
+- رنگ و آیکون می‌توانند بر اساس پروژه تغییر کنند بدون اینکه Information Hierarchy تغییر کند.
 
-## Theme flexibility
+## انعطاف Theme
 
-The following are **not** fixed by this standard:
+موارد زیر توسط این Standard ثابت نمی‌شوند:
 
-- exact colors,
-- icon family,
-- font family,
-- border radius,
-- shadow values,
-- decorative backgrounds,
-- brand-specific visual identity.
+- رنگ دقیق
+- Icon Family
+- Font Family
+- Border Radius
+- Shadow
+- Decorative Background
+- Brand-specific Visual Identity
 
-These belong to the project theme or the broader UI standard.
+این موارد متعلق به Theme پروژه یا UI Standard عمومی هستند.
 
 ## Verification
 
-Before delivering a structured data output:
+پیش از تحویل Structured Data:
 
-- [ ] RTL is correct for Persian output.
-- [ ] Core fields follow an intentional order.
-- [ ] Row numbering is continuous when used.
-- [ ] Data cells are aligned consistently.
-- [ ] Duplicate or obviously irrelevant records were handled when relevant.
-- [ ] Missing data was not fabricated.
-- [ ] Long tables remain usable through freeze/filter or equivalent behavior.
-- [ ] Theme changes did not break the approved structure.
+- [ ] RTL خروجی فارسی درست است.
+- [ ] Fieldهای اصلی ترتیب هدفمند دارند.
+- [ ] شماره‌گذاری در صورت استفاده پیوسته است.
+- [ ] Alignment داده‌ها یکدست است.
+- [ ] Duplicate و Recordهای واضحاً نامرتبط در صورت نیاز مدیریت شده‌اند.
+- [ ] Missing Data ساخته نشده است.
+- [ ] Tableهای بلند با Freeze / Filter یا رفتار معادل قابل‌استفاده مانده‌اند.
+- [ ] تغییر Theme باعث شکستن Structure تأییدشده نشده است.
 
-## Reference implementation
+## Reference Implementation
 
-See:
+ببین:
 
 `references/babol-mechanics-excel-golden-template.md`
