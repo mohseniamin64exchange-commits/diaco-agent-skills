@@ -7,31 +7,45 @@ description: Preserves a consistent reusable UI language across Diaco applicatio
 
 ## Goal
 
-A new Diaco application should reuse an established visual and interaction language instead of inventing a new interface in every chat.
+A new Diaco application should reuse an established information and interaction structure instead of inventing a new interface in every chat.
+
+## Core distinction
+
+**Structure and theme are separate layers.**
+
+Preserve structure when it is approved:
+- information order
+- navigation placement
+- field hierarchy
+- table/form organization
+- RTL/LTR behavior
+- interaction flow
+
+Allow theme variation:
+- colors
+- icons
+- branding
+- decorative styling
+- shadows/radii where project-specific
+
+A different theme is not a reason to redesign an approved structure.
 
 ## Before building UI
 
 1. Read the Diaco UI Standard.
-2. Look for an approved project/reference implementation.
-3. Inspect representative working screens/components.
-4. Identify reusable tokens:
-   - colors
-   - typography
-   - spacing
-   - radii
-   - borders/shadows
-   - breakpoints
-5. Identify reusable structures:
-   - app shell
-   - sidebar/navigation
-   - header
-   - forms
-   - tables
-   - cards
-   - dialogs
-   - notifications
-   - empty/error/loading states
+2. Read `standards/structured-data-presentation-standard.md` for data-heavy Persian screens.
+3. Look for an approved project/reference implementation.
+4. Inspect representative working screens/components.
+5. Identify reusable tokens and reusable structures.
 6. If the task involves polish, animation, prototyping, UI-library choice, or mobile-web behavior, load `ui-design-engineering`.
+
+## Persian baseline
+
+For Persian-first interfaces:
+- use RTL by default,
+- prefer right-side primary navigation/sidebar unless an approved project reference differs,
+- keep repeated forms/tables in a consistent information order,
+- center structured table values by default.
 
 ## Priority Design Engineering reference
 
@@ -45,59 +59,35 @@ Use it especially for:
 - mobile-web interaction details
 - React Native/Expo motion where relevant
 
-See `references/emil-kowalski-skills.md`.
-
-It is **not** the authority for Diaco's visual identity.
+It is **not** the authority for Diaco's visual identity or approved information structure.
 
 ## Additional UI reference
 
-`adamtossell/ui-skills` may also be consulted for reusable design workflows, reference-capture techniques, prompting patterns, interaction ideas, and frontend practices.
+`adamtossell/ui-skills` may also be consulted for reusable design workflows and frontend practices.
 
 ## Precedence
 
 1. approved project-specific UI/reference
-2. ACTIVE Diaco UI rules
+2. ACTIVE Diaco structure/UI rules
 3. Emil Kowalski Skills
 4. UI Skills and other external design references
 
-Do not import an external style as a Diaco-wide standard without explicit approval.
-
 ## Prototype rule
 
-When the visual direction is undecided and alternatives would materially help:
+When the visual direction is undecided:
 - explore outside production code,
 - make variants genuinely different,
-- keep existing project tokens/context where appropriate,
+- preserve approved information structure unless the user explicitly asks to compare structural alternatives,
 - let the user choose,
 - integrate only the selected direction.
-
-## Rules
-
-- Reuse tokens and components before introducing new variants.
-- Do not redesign stable shared navigation without explicit need.
-- Keep responsive behavior consistent.
-- Use semantic design tokens instead of scattered raw values.
-- Accessibility and keyboard behavior are part of component quality.
-- Product-specific branding may override shared defaults intentionally.
-- Motion must serve a purpose and should not slow high-frequency workflows.
-- Inspect existing UI dependencies before introducing another component library.
-
-## Design contract
-
-For a new screen, record:
-- screen purpose
-- primary action
-- reused components
-- required states
-- responsive behavior
-- intentional deviations from the shared system
 
 ## Verification
 
 - [ ] Existing shared patterns were inspected.
+- [ ] Approved structure was preserved.
+- [ ] Persian RTL/navigation/alignment rules were applied when relevant.
 - [ ] New values/components were introduced only when needed.
 - [ ] Loading/error/empty states are handled.
 - [ ] Responsive and keyboard behavior were checked where applicable.
 - [ ] External UI references did not silently override approved Diaco/project rules.
-- [ ] Prototype exploration remained isolated until user selection.
-- [ ] Intentional deviations are documented.
+- [ ] Theme changes did not silently change information architecture.
