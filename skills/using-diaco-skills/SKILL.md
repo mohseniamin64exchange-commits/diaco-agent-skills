@@ -11,7 +11,7 @@ description: Task را به Standard، Workflow، Platform Profile و Tool / Ref
 - GitHub Durable Memory → `github-project-memory`
 - یکدستی Shared UI → `shared-ui-system`
 - خروجی فارسی Excel / List / Table → `structured-data-output`
-- UI Polish / Animation / Prototyping / UI Review → `ui-design-engineering`
+- UI Creation / Polish / Animation / Prototyping / UI Review → `ui-design-engineering`
 - Local Business / Supplier / Lead Discovery → `local-business-data`
 - Marketing Workflow تکرارشونده یا خودکار → `automated-marketing-growth`
 - تغییر امن در Codebase موجود → `safe-existing-project-change`
@@ -35,11 +35,26 @@ description: Task را به Standard، Workflow، Platform Profile و Tool / Ref
 - Documentation فعلی Library / API → Context7
 - Web Browser Verification → Playwright CLI
 - Supabase Operation → official Supabase MCP
-- UI Design Engineering → Emil Kowalski Skills
+- Rapid UI Screen / Flow Prototype قبل از کدنویسی → `lnkiai/m3e-canvas`
+- UI Design Engineering / Polish / Motion → Emil Kowalski Skills
 - UI Reference تکمیلی → UI Skills
 - Local Business Data → `Mahanaicoach/google-maps-scraper-kit`
 - Marketing / Growth Execution → `coreyhaines31/marketingskills`
 - Authorized Security Automation → Strix
+
+## مسیر UI Prototype
+
+وقتی کاربر قبل از Coding می‌خواهد فرم/صفحه را ببیند یا چند مدل مقایسه کند:
+
+1. Structure تأییدشده Project و Diaco را بخوان.
+2. RTL، Right Sidebar، Field Order و Table/Form Hierarchy تأییدشده را حفظ کن.
+3. در صورت مناسب بودن، با M3E Canvas Prototype / Screen Flow بساز.
+4. کاربر Variant یا Flow را انتخاب/تأیید کند.
+5. Prototype را به Prompt / Implementation Brief تبدیل کن.
+6. در Stack واقعی پروژه پیاده‌سازی کن.
+7. خروجی Production را جداگانه Verify کن.
+
+M3E Canvas مرجع Theme نهایی Diaco نیست.
 
 ## ترکیب Marketing
 
