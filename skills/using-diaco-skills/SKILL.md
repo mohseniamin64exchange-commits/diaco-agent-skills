@@ -1,40 +1,18 @@
 ---
 name: using-diaco-skills
-description: Routes project work to the appropriate Diaco standards, workflows, platform profile, and approved engineering tools.
+description: Routes work to the appropriate Diaco standards, workflows, platform profile, and approved tools/references.
 ---
 
 # Using Diaco Skills
-
-## Overview
-
-Use the smallest applicable combination of:
-1. shared standard,
-2. operational skill,
-3. platform profile,
-4. specialized engineering tool/reference,
-5. project-specific rule.
-
-## Standards routing
-
-- New/existing project setup → `standards/project-standard.md`
-- UI/layout/components/forms/tables/dialogs → `standards/ui-standard.md`
-- Printing/preview/report output → `standards/print-standard.md`
-- Backup/restore → `standards/backup-restore-standard.md`
-- Users/roles/permissions → `standards/user-management-standard.md`
-- Windows desktop application baseline → `standards/windows-app-standard.md`
-- Testing/verification → `standards/testing-standard.md`
-- Tool selection → `standards/engineering-toolchain-standard.md`
-- PR/diff review → `standards/pull-request-review-standard.md`
-- Security review → `standards/security-review-standard.md`
-- Version/release/rollback → `standards/release-standard.md`
 
 ## Skill routing
 
 - Continuing work across sessions or Agents → `project-context-handoff`
 - GitHub durable memory → `github-project-memory`
 - Shared UI consistency → `shared-ui-system`
-- UI polish / animation / prototyping / UI review / library choice → `ui-design-engineering`
+- UI polish / animation / prototyping / UI review → `ui-design-engineering`
 - Local business / supplier / lead discovery → `local-business-data`
+- Repeatable/automated marketing workflows → `automated-marketing-growth`
 - Safe changes in existing codebases → `safe-existing-project-change`
 - Supabase web apps → `supabase-webapp-guardrails`
 - Windows desktop apps → `windows-desktop-standard`
@@ -45,34 +23,31 @@ Use the smallest applicable combination of:
 ## Tool/reference routing
 
 - Current external library/API documentation → Context7
-- Web browser automation/verification → Playwright CLI
-- Supabase schema/config/project operations → official Supabase MCP
-- UI design engineering and motion → Emil Kowalski Skills
-- Additional UI workflow inspiration → UI Skills
-- Local business/supplier/lead data → `Mahanaicoach/google-maps-scraper-kit`
-- Authorized application security automation → Strix
+- Web browser verification → Playwright CLI
+- Supabase operations → official Supabase MCP
+- UI design engineering → Emil Kowalski Skills
+- Additional UI reference → UI Skills
+- Local business data → `Mahanaicoach/google-maps-scraper-kit`
+- Marketing/growth execution → `coreyhaines31/marketingskills`
+- Authorized security automation → Strix
+
+## Marketing combination
+
+When the user wants automated marketing:
+1. load `automated-marketing-growth`
+2. establish product-marketing context
+3. use Google Maps Scraper Kit for discovery if local-business data is needed
+4. use Marketing Skills for qualification/strategy/content/outreach preparation
+5. test on a small pilot
+6. automate only after measurable validation
 
 ## Shared rules
 
-1. Inspect current repository state before non-trivial changes.
-2. Identify the project platform.
-3. Load only relevant standards, skills, and tools.
-4. Project-specific rules override generic Diaco defaults when intentionally defined.
-5. Do not invent missing state or DRAFT-standard details.
-6. Keep changes scoped and reversible.
-7. Verify before declaring completion.
-8. Persist important state for the next session.
-9. For business-data scraping, default to light targeted collection and verify important records.
-
-## Verification
-
-Before finishing:
-- [ ] Correct standards/skills/tools were used.
-- [ ] Repository state was inspected.
-- [ ] Correct platform profile was selected.
-- [ ] Relevant verification was performed.
-- [ ] Significant changes received review when appropriate.
-- [ ] DRAFT standards were not silently treated as approved.
-- [ ] External UI guidance did not silently become Diaco identity.
-- [ ] Scraped business data was cleaned/verified as appropriate.
-- [ ] Durable state/handoff was updated when continuation is expected.
+1. Inspect current repository/data state.
+2. Load only relevant standards, skills, and tools.
+3. Project-specific rules override generic Diaco defaults.
+4. Do not invent missing state.
+5. Keep changes scoped and reversible.
+6. Verify before declaring completion.
+7. Persist important state.
+8. For marketing automation, do not scale before a pilot passes quality checks.
