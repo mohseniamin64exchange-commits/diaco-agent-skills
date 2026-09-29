@@ -8,7 +8,7 @@ For project work, prefer this order when information conflicts:
 2. Project-specific rules/specifications and approved project references
 3. Latest project handoff
 4. Approved Diaco standards and relevant skills
-5. Central hub guidance
+5. Central hub global rules and approved working preferences
 6. Conversation history
 
 Do not assume an old chat accurately reflects the current repository.
@@ -20,6 +20,7 @@ Do not assume an old chat accurately reflects the current repository.
 - inspect the relevant files and tests
 - identify existing patterns before creating new ones
 - preserve unrelated working behavior
+- read `00-AI-HUB/WORKING-PREFERENCES.md` when cross-project presentation or workflow preferences matter
 
 ## Standards layer
 
@@ -27,6 +28,7 @@ Before implementing a reusable feature, inspect `standards/README.md` and load t
 
 Examples:
 - project structure / onboarding → `standards/project-standard.md`
+- structured data / Persian tables / lead-list output → `standards/structured-data-presentation-standard.md`
 - UI/layout/components → `standards/ui-standard.md`
 - printing → `standards/print-standard.md`
 - backup/restore → `standards/backup-restore-standard.md`
@@ -44,6 +46,21 @@ Examples:
 - **DRAFT** means do not invent missing details. Use an approved real project/reference implementation, then promote only approved reusable rules.
 - Project-specific exceptions belong in the project's own `AGENTS.md`.
 
+## Approved presentation behavior
+
+When relevant:
+
+- preserve approved information structure even when the visual theme changes,
+- Persian structured data defaults to RTL,
+- structured Persian table values are centered by default,
+- numbered result lists start at 1 and continue without gaps unless filtering semantics require otherwise,
+- Persian application shells prefer right-side primary navigation unless a project-specific approved reference differs,
+- colors/icons/branding may vary by project without changing the approved information hierarchy.
+
+Use:
+- `standards/structured-data-presentation-standard.md`
+- `skills/structured-data-output/SKILL.md`
+
 ## Engineering tool and reference selection
 
 Use specialized tools/references when they improve the current task; do not install everything everywhere.
@@ -56,9 +73,7 @@ Use specialized tools/references when they improve the current task; do not inst
 - Authorized security review → Diaco security workflow and Strix when useful.
 - Significant change before merge/release → Diaco pull-request review workflow.
 
-Approved project UI and the Diaco UI Standard always take precedence over external UI references.
-
-If a specialized tool is unavailable, continue using authoritative project state and official vendor documentation rather than guessing.
+Approved project UI and Diaco standards always take precedence over external UI references.
 
 ## During implementation
 
@@ -70,6 +85,7 @@ If a specialized tool is unavailable, continue using authoritative project state
 - do not commit credentials or secrets
 - do not turn a DRAFT standard into a universal rule without evidence/approval
 - do not convert external UI taste into a Diaco-wide visual rule without approval
+- do not replace an approved information structure merely to make a theme look different
 
 ## Platform-aware rules
 
@@ -80,8 +96,6 @@ Before implementation, identify the actual project platform from the repository.
 Examples:
 - Windows desktop application → `skills/windows-desktop-standard/SKILL.md`
 - Supabase/web application → `skills/supabase-webapp-guardrails/SKILL.md`
-
-Do not automatically apply web/Supabase assumptions to a Windows desktop project, and do not force desktop conventions onto a web project.
 
 ## Verification
 
@@ -96,6 +110,7 @@ Where applicable, verify:
 - affected user flow
 - browser flow with Playwright CLI for web changes when useful
 - UI interaction/polish on the actual target platform
+- structured data ordering/RTL/alignment for data-heavy output
 - print/backup/restore behavior if changed
 - security impact for security-sensitive changes
 
@@ -124,8 +139,8 @@ When adopting third-party work:
 
 Every Diaco-managed application repository should contain at minimum:
 
-- `AGENTS.md` — project-specific operating rules and rule precedence
-- `HANDOFF.md` — current cross-session project state
+- `AGENTS.md`
+- `HANDOFF.md`
 
 New projects should start from:
 - `templates/PROJECT-AGENTS.md`
@@ -136,11 +151,12 @@ Existing projects can adopt this standard without restructuring the application.
 The standard startup order for an Agent working on a project is:
 
 1. Central hub: `00-AI-HUB/AGENT-START-HERE.md`
-2. Shared Diaco rules: `diaco-agent-skills/AGENTS.md`
-3. Relevant Diaco standard(s)
-4. Relevant Diaco skill(s), including the correct platform profile
-5. Project-specific `AGENTS.md`
-6. Project `HANDOFF.md`
-7. Actual repository files, tests, configuration, and Git state
+2. Approved working preferences: `00-AI-HUB/WORKING-PREFERENCES.md`
+3. Shared Diaco rules: `diaco-agent-skills/AGENTS.md`
+4. Relevant Diaco standard(s)
+5. Relevant Diaco skill(s), including the correct platform profile
+6. Project-specific `AGENTS.md`
+7. Project `HANDOFF.md`
+8. Actual repository files, tests, configuration, and Git state
 
 Project-specific rules take precedence over generic Diaco defaults when intentionally defined.
