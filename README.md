@@ -1,68 +1,67 @@
 # Diaco Agent Skills
 
-Reusable workflows, shared standards, engineering tools, design-engineering references, business-data tooling, structured-data presentation, and repeatable marketing workflows for AI-assisted projects.
+مجموعه Workflowها، Standardهای مشترک، ابزارهای مهندسی، Referenceهای Design Engineering، Business Data Tooling، Structured Data Presentation و Marketing Workflowهای قابل‌تکرار برای پروژه‌های مبتنی بر AI.
 
-**Current version:** 0.7.0
+**نسخه فعلی:** 0.7.0
 
-## Important capabilities
+## قابلیت‌های مهم
 
-- project continuity and GitHub-backed memory
-- Windows and Supabase platform profiles
-- UI design engineering
-- **approved Persian structured-data presentation**
-- local-business and supplier discovery
-- repeatable marketing and growth workflows
-- testing, security review, and PR review
+- تداوم پروژه و GitHub-backed Memory
+- Platform Profileهای Windows و Supabase
+- UI Design Engineering
+- **نمایش Structured Data فارسیِ تأییدشده**
+- Local Business و Supplier Discovery
+- Marketing و Growth Workflowهای قابل‌تکرار
+- Testing، Security Review و PR Review
 
-## Approved cross-project presentation model
+## مدل تأییدشده Presentation بین پروژه‌ها
 
-Diaco now explicitly separates:
+Diaco اکنون این دو لایه را به‌صراحت جدا می‌کند:
 
 **Structure**
-- information order
-- hierarchy
-- RTL/LTR behavior
-- alignment logic
-- row numbering
-- navigation placement
-- table/form organization
-
-from:
+- ترتیب اطلاعات
+- Hierarchy
+- رفتار RTL / LTR
+- Alignment Logic
+- Row Numbering
+- محل Navigation
+- ساختار Table / Form
 
 **Theme**
-- colors
-- icons
-- branding
-- decorative styling
+- رنگ‌ها
+- آیکون‌ها
+- Branding
+- Decorative Styling
 
-Approved Persian defaults:
-- RTL for Persian-first structured output
-- centered structured table data by default
-- continuous numbering from 1 for result lists
-- right-side primary navigation/sidebar as the preferred Persian application baseline unless a project-specific approved reference differs
+Defaultهای تأییدشده برای خروجی فارسی:
+- RTL برای Structured Output فارسی
+- Center بودن Structured Table Data به‌صورت پیش‌فرض
+- Numbering پیوسته از 1 برای Result Listها
+- Sidebar / Navigation اصلی سمت راست به‌عنوان Baseline ترجیحی برنامه فارسی، مگر اینکه Reference پروژه متفاوت باشد
 
-Authoritative files:
+فایل‌های مرجع:
 - `standards/structured-data-presentation-standard.md`
 - `skills/structured-data-output/SKILL.md`
 - `references/babol-mechanics-excel-golden-template.md`
 
-## Business / lead-list output
+## خروجی Business / Lead List
 
-The approved baseline was extracted from the user-approved workbook `babol_mechanics_clean_rtl.xlsx`.
+Baseline تأییدشده از Workbook مورد تأیید کاربر با نام `babol_mechanics_clean_rtl.xlsx` استخراج شده است.
 
-Preferred order:
+ترتیب ترجیحی:
+
 `ردیف → نام کسب‌وکار → نوع کاربردی → دسته‌بندی منبع → آدرس خلاصه → شماره تلفن → وب‌سایت → امتیاز → تعداد Review`
 
-The workbook's current blue theme is a reference theme only; it is not a universal Diaco color rule.
+Theme آبی فعلی Workbook فقط Theme همان Reference است و رنگ عمومی Diaco محسوب نمی‌شود.
 
-## Marketing workflow
+## Marketing Workflow
 
-Diaco treats this combination as an important reusable capability:
+Diaco ترکیب زیر را به‌عنوان یک قابلیت مهم و قابل‌استفاده مجدد در نظر می‌گیرد:
 
 - `Mahanaicoach/google-maps-scraper-kit`
 - `coreyhaines31/marketingskills`
 
-Typical flow:
+Flow معمول:
 
 ```text
 Product context
@@ -76,21 +75,21 @@ Product context
 → Repeat only after pilot success
 ```
 
-Relevant skills:
+Skillهای مرتبط:
 - `skills/local-business-data/SKILL.md`
 - `skills/structured-data-output/SKILL.md`
 - `skills/automated-marketing-growth/SKILL.md`
 
-## Core principles
+## اصول اصلی
 
-1. GitHub is the durable source of truth.
-2. Important project state must not live only in chat history.
-3. Read approved working preferences before substantial cross-project work.
-4. Read before modifying an existing project.
-5. Preserve scope and working behavior.
-6. Preserve approved structure even when the project theme changes.
-7. Verify changes with evidence.
-8. Use specialized tools only when relevant.
-9. Keep secrets out of Git.
-10. Do not scale a workflow before its pilot is validated.
-11. Real business/project/customer data outranks generic model assumptions.
+1. GitHub حافظه پایدار و Source of Truth است.
+2. اطلاعات مهم پروژه نباید فقط در Chat History بمانند.
+3. پیش از کار بین‌پروژه‌ای مهم، ترجیحات کاری تأییدشده را بخوان.
+4. پیش از تغییر پروژه موجود، وضعیت واقعی آن را بررسی کن.
+5. Scope و رفتار سالم موجود را حفظ کن.
+6. Structure تأییدشده را حتی با تغییر Theme حفظ کن.
+7. تغییرات را با Evidence Verify کن.
+8. Specialized Tool فقط در صورت مرتبط بودن استفاده شود.
+9. Secret در Git ذخیره نشود.
+10. Workflow قبل از Pilot موفق Scale نشود.
+11. Data واقعی Business / Project / Customer از Generic Assumption مدل معتبرتر است.
